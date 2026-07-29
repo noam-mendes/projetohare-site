@@ -23,10 +23,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <meta name="description"...>
-
-    <meta property="og:image"...>
-
 </head>
 
 <body>
@@ -46,17 +42,18 @@
             <ul>
 
                 <li><a href="#release">Lançamento</a></li>
-                <li><a href="#video">Vídeo</a></li>
+                <li><a href="#store">Loja</a></li>
                 <li><a href="#tour">Shows</a></li>
-                <li><a href="#gallery">Galeria</a></li>
+                <li><a href="#discography">Discografia</a></li>
                 <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Links</a></li>
 
             </ul>
 
-            <button id="mobile-button" aria-label="Abrir menu">
+            <button id="mobile-button" type="button" aria-label="Abrir menu" aria-expanded="false">
 
-                <img src="assets/menu-logo.png" alt="Abrir menu">
+                <img src="assets/menu-logo.png" alt="">
+
+            </button>
 
             </button>
 
@@ -68,7 +65,7 @@
 
         <section class="hero">
 
-            <img class="hero-background" src="assets/hero.jpg" alt="Projeto Hare">
+            <img class="hero-background" src="assets/hero.webp" alt="Projeto Hare" fetchpriority="high">
 
             <div class="hero-overlay"></div>
 
@@ -107,7 +104,7 @@
             <div class="section-title">
 
                 <h2>
-                    Ouça agora
+                    OUÇA AGORA
                 </h2>
 
             </div>
@@ -139,26 +136,88 @@
 
         </section>
 
-        <section id="video">
+        <section id="store">
 
             <div class="section-title">
+                <h2>Loja</h2>
+            </div>
 
-                <h2>
-                    Vídeos
-                </h2>
+            <div class="featured-merch">
+
+                <div class="featured-merch-image">
+                    <img src="assets/store/camiseta-saocristovao.png" alt="Camiseta São Cristóvão" loading="lazy" decoding="async">
+                </div>
+
+                <div class="featured-merch-info">
+
+                    <span class="store-tag">Pré-venda</span>
+
+                    <h3>Camiseta São Cristóvão</h3>
+
+                    <p>
+                        Camiseta oficial do novo álbum.
+                        Faça sua reserva antecipadamente e retire em um dos shows!
+                    </p>
+
+                    <a href="#" class="store-button" target="_blank" rel="noopener noreferrer">
+                        Reservar agora
+                    </a>
+
+                    <small>
+                        O link de reserva será disponibilizado em breve.
+                    </small>
+
+                </div>
 
             </div>
 
-            <div class="video-container">
+            <div class="tour-merch">
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/SyIodbqt8aI?si=orfoevcGa8ouyb8-"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Gbc4KGbHmyk?si=zDdd25TCdfeR5Y-w"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="tour-merch-heading">
+
+                    <h3>Merch da Turnê</h3>
+
+                    <p>
+                        Estes itens estarão disponíveis para compra diretamente
+                        nos shows, enquanto durarem os estoques.
+                    </p>
+
+                </div>
+
+                <div class="merch-grid">
+
+                    <article class="merch-card">
+
+                        <img src="assets/store/camiseta-coracao-ecobag.webp"
+                            alt="Camiseta O Coração É um Fardo Pesado e ecobag" loading="lazy" decoding="async">
+
+                        <h4>Camiseta PH2 + Ecobag</h4>
+
+                        <span>Disponível nos shows</span>
+
+                    </article>
+
+                    <article class="merch-card">
+
+                        <img src="assets/store/adesivos.webp" alt="Adesivos da Projeto Hare" loading="lazy" decoding="async">
+
+                        <h4>Adesivos</h4>
+
+                        <span>Disponíveis nos shows</span>
+
+                    </article>
+
+                    <article class="merch-card">
+
+                        <img src="assets/store/cd.png" alt="CD físico de São Cristóvão" loading="lazy" decoding="async">
+
+                        <h4>CD</h4>
+
+                        <span>Em breve</span>
+
+                    </article>
+
+                </div>
 
             </div>
 
@@ -178,7 +237,7 @@
 
                 <article class="show-card">
 
-                    <img src="assets/posters/1.jpg" alt="Poster">
+                    <img src="assets/posters/1.webp" alt="Poster">
 
                     <div class="show-info">
 
@@ -202,24 +261,275 @@
 
         </section>
 
-        <section id="gallery">
+        <section id="discography" class="section">
 
             <div class="section-title">
+                <h2>Discografia</h2>
+            </div>
 
-                <h2>
-                    Galeria
-                </h2>
+            <div class="featured-release">
+
+                <img src="assets/discography/saocristovao.webp" alt="São Cristóvão" loading="lazy" decoding="async">
+
+                <div class="featured-info">
+
+                    <span class="year">2026</span>
+
+                    <h3>São Cristóvão</h3>
+
+                    <p>Álbum</p>
+
+                    <a href="#" class="button-outline">
+                        Pré-save
+                    </a>
+
+                </div>
 
             </div>
 
-            <div class="gallery-grid">
+            <div class="discography-year">
 
-                <img src="assets/gallery/1.jpg" alt="">
-                <img src="assets/gallery/2.jpg" alt="">
-                <img src="assets/gallery/3.jpg" alt="">
-                <img src="assets/gallery/4.jpg" alt="">
-                <img src="assets/gallery/5.jpg" alt="">
-                <img src="assets/gallery/6.jpg" alt="">
+                <h3>2025</h3>
+
+                <div class="release-grid">
+
+                    <a href="https://open.spotify.com/album/2MgBfNSvvZJxFUybJSEI1E?si=qbUVPkO7QficVdLPp_lZhA"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/nvtn.webp" loading="lazy" decoding="async">
+
+                        <h4>Não Vai Ter Natal</h4>
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                    <a href="https://open.spotify.com/album/3xt6qlPtN3Zp8hCE1eHHh1?si=Tuh_n3x8RxmP5UIssJ7YVQ"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/lobo.webp" loading="lazy" decoding="async">
+
+                        <h4>O Lobo</h4>
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                    <a href="https://open.spotify.com/album/1nbIDd21p5DbMmkczULGDG?si=m-meYFQ1QKGlegS_rsnEsQ"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/fecharam.webp" loading="lazy" decoding="async">
+
+                        <h4>Fecharam Nosso Bar</h4>
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                    <a href="https://open.spotify.com/album/14YCbdLi95D30iTJ6izQYW?si=_9hGUjxcQYacPgAYFkNhWw"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/cao.webp" loading="lazy" decoding="async">
+
+                        <h4>O Cão Mais Fiel do Mundo</h4>
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="discography-year">
+
+                <h3>2024</h3>
+
+                <div class="release-grid">
+
+                    <a href="https://open.spotify.com/album/2On8B1rd9wLdnDCqm15KRr?si=rlTbJBzPTJezo0O5IUudIw"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/coracao.webp" loading="lazy" decoding="async">
+
+                        <h4>O Coração É um Fardo Pesado</h4>
+
+                        <span class="type">Álbum</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                    <a href="https://open.spotify.com/album/72K3vjxQUrrlG71is5lClI?si=blhVE2eQTwK-31cuiejF8w"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/semsentimento.webp" loading="lazy" decoding="async">
+
+                        <h4>Sem Sentimento</h4>
+
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="discography-year">
+
+                <h3>2023</h3>
+
+                <div class="release-grid">
+
+                    <a href="https://open.spotify.com/album/3CIZlLNvqtBdzaPzJMjUA4?si=xzjSByujT8GI22mdZ1JM-Q"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/guarda.webp" loading="lazy" decoding="async">
+
+                        <h4>Guarda Chuva</h4>
+
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="discography-year">
+
+                <h3>2022</h3>
+
+                <div class="release-grid">
+
+                    <a href="https://open.spotify.com/album/6d23gObEQs245rDxRA3L92?si=cmPwn7RRQqSIhORD7eH63g"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/amor.webp" loading="lazy" decoding="async">
+
+                        <h4>Amor Líquido</h4>
+
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="discography-year">
+
+                <h3>2021</h3>
+
+                <div class="release-grid">
+
+                    <a href="https://open.spotify.com/album/7hx4doGgeGdMNnRbwJjYP5?si=vczyX85XSaelcIcwsxl8lQ"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/fuiparar.webp" loading="lazy" decoding="async">
+
+                        <h4>Onde Eu Fui Parar</h4>
+
+                        <span class="type">EP</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="discography-year">
+
+                <h3>2019</h3>
+
+                <div class="release-grid">
+
+                    <a href="https://open.spotify.com/album/2MKmQlUzuOsVBh2KSmwjJx?si=Dw-QP7iFQlSmBCmmq0EyCA"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/devoestar.webp" loading="lazy" decoding="async">
+
+                        <h4>Onde Eu Devo Estar</h4>
+
+                        <span class="type">Álbum</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="discography-year">
+
+                <h3>2018</h3>
+
+                <div class="release-grid">
+
+                    <a href="https://open.spotify.com/album/2hY6AZnqIqNpXkV7k0hXMc?si=4DxvQ4mgRZiuA7iMDlgBrw"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/nomenumero.webp" loading="lazy" decoding="async">
+
+                        <h4>Nome e Número</h4>
+
+                        <span class="type">EP</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                    <a href="https://open.spotify.com/album/3ttr9d1Hbv4h9cKpK13x53?si=mL0KHDCKRIyXR-uKpTyf0Q"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/to.webp" loading="lazy" decoding="async">
+
+                        <h4>Tô</h4>
+
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                </div>
 
             </div>
 
@@ -229,7 +539,7 @@
 
             <div class="about-image">
 
-                <img src="assets/about.jpg" alt="Projeto Hare">
+                <img src="assets/about.webp" alt="Projeto Hare" loading="lazy" decoding="async">
 
             </div>
 
@@ -264,45 +574,6 @@
 
         </section>
 
-        <section id="contact">
-
-            <div class="section-title">
-
-                <h2>Links</h2>
-
-            </div>
-
-            <div class="contact-links">
-
-                <a href="https://www.instagram.com/projetohare" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                    Instagram
-                </a>
-
-                <a href="https://www.youtube.com/@Projeto_Hare" target="_blank">
-                    <i class="fa-brands fa-youtube"></i>
-                    YouTube
-                </a>
-
-                <a href="https://open.spotify.com/intl-pt/artist/5hrlixUL2uLOyIKUpJu97u?si=n9FLwC8cT520W0rKVfHbaQ"
-                    target="_blank">
-                    <i class="fa-brands fa-spotify"></i>
-                    Spotify
-                </a>
-
-                <a href="https://x.com/projetohare" target="_blank">
-                    <i class="fa-brands fa-x-twitter"></i>
-                    X
-                </a>
-
-                <a href="mailto:projetohare@gmail.com">
-                    <i class="fa-solid fa-envelope"></i>
-                    E-mail
-                </a>
-
-            </div>
-
-        </section>
 
     </main>
 
@@ -325,8 +596,54 @@
 
     </footer>
 
-    <script src="js/app.js"></script>
+    <div class="social-bar">
 
+        <a href="https://www.instagram.com/projetohare" target="_blank" aria-label="Instagram">
+
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+
+        </a>
+
+        <a href="https://open.spotify.com/intl-pt/artist/5hrlixUL2uLOyIKUpJu97u?si=r2MWzqa8SqaSxuUdPOiQxw&nd=1&dlsi=9b2154252bfe483a"
+            target="_blank" aria-label="Spotify">
+
+            <i class="fa-brands fa-spotify"></i>
+            <span>Spotify</span>
+
+        </a>
+
+        <a href="https://www.youtube.com/@Projeto_Hare" target="_blank" aria-label="YouTube">
+
+            <i class="fa-brands fa-youtube"></i>
+            <span>YouTube</span>
+
+        </a>
+
+        <a href="tiktok.com/@projetohare" target="_blank" aria-label="TikTok">
+
+            <i class="fa-brands fa-tiktok"></i>
+            <span>TikTok</span>
+
+        </a>
+
+        <a href="https://x.com/projetohare" target="_blank" aria-label="X">
+
+            <i class="fa-brands fa-x-twitter"></i>
+            <span>X</span>
+
+        </a>
+
+        <a href="mailto:projetohare@gmail.com" aria-label="Email">
+
+            <i class="fa-solid fa-envelope"></i>
+            <span>E-mail</span>
+
+        </a>
+
+    </div>
+
+    <script src="js/script.js"></script>
 
 </body>
 

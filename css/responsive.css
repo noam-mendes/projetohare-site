@@ -1,0 +1,520 @@
+/* ==================================================
+   RESPONSIVIDADE — TABLETS E CELULARES
+================================================== */
+
+@media (max-width: 900px) {
+
+    /* BASE */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    section,
+    #store,
+    #discography {
+        width: 100%;
+        max-width: none;
+        padding: 80px 22px;
+    }
+
+    .section-title {
+        margin-bottom: 42px;
+    }
+
+    .section-title h2 {
+        font-size: clamp(2.3rem, 11vw, 3.4rem);
+        line-height: 1;
+    }
+
+
+    /* CABEÇALHO */
+
+    .navbar,
+    .navbar.scrolled {
+        padding: 7px 18px;
+        background: rgba(8, 8, 8, .97);
+    }
+
+    .logo img {
+        width: auto;
+        height: 34px;
+    }
+
+    .logo,
+    #mobile-button {
+        position: relative;
+        z-index: 1002;
+    }
+
+    #mobile-button {
+        display: flex;
+        position: relative;
+        z-index: 1002;
+    }
+
+    #mobile-button img {
+        width: 47px;
+        height: auto;
+    }
+
+    .navbar ul {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: 100svh;
+
+        z-index: 1001;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 26px;
+        padding: 100px 24px 60px;
+
+        background: #090909;
+
+        overflow-y: auto;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: none;
+
+        transition:
+            opacity .3s ease,
+            visibility .3s ease;
+    }
+
+    .navbar ul a {
+        display: block;
+
+        font-size: 1.25rem;
+        line-height: 1.2;
+
+        letter-spacing: .12em;
+
+        text-align: center;
+    }
+
+    .navbar.menu-open ul {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        width: 100%;
+        min-height: 100svh;
+        height: auto;
+    }
+
+    .hero-background {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 45% center;
+        transform: none;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(to bottom,
+                rgba(0, 0, 0, .2),
+                rgba(0, 0, 0, .82));
+    }
+
+    .hero-content {
+
+        width: 100%;
+        max-width: none;
+        min-height: 100svh;
+
+        padding: 80px 24px 50px;
+
+        justify-content: flex-start;
+
+    }
+
+    .album-logo {
+        width: min(100%, 390px);
+        max-width: 100%;
+        margin: 20px 0 26px;
+    }
+
+    .eyebrow {
+        font-size: .8rem;
+        letter-spacing: .22em;
+        margin-top:110px;
+    }
+
+    .hero p {
+        max-width: 330px;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+    }
+
+    .button {
+        padding: 14px 20px;
+        font-size: .72rem;
+    }
+
+
+    /* PLAYER / OUÇA AGORA */
+
+    .streaming {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .spotify,
+    .youtube {
+        width: 100%;
+        min-height: 0;
+        overflow: hidden;
+    }
+
+    .streaming iframe,
+    .video-container iframe {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        border: 0;
+    }
+
+
+    /* LOJA — PRÉ-VENDA */
+
+    .featured-merch {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 80px;
+    }
+
+    .featured-merch-image {
+        width: 100%;
+    }
+
+    .featured-merch-image img {
+        width: 100%;
+        aspect-ratio: auto;
+        object-fit: contain;
+    }
+
+    .featured-merch-info {
+        width: 100%;
+        max-width: none;
+    }
+
+    .featured-merch-info h3 {
+        max-width: 330px;
+        font-size: clamp(2.2rem, 11vw, 3.4rem);
+    }
+
+    .featured-merch-info p {
+        max-width: none;
+        font-size: 1rem;
+    }
+
+    .tour-merch {
+        padding-top: 45px;
+    }
+
+    .tour-merch-heading {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .tour-merch-heading h3 {
+        margin-bottom: 15px;
+        font-size: 2rem;
+    }
+
+    .tour-merch-heading p {
+        max-width: none;
+    }
+
+    .merch-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: 14px;
+    }
+
+    .merch-card img {
+        width: 100%;
+
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+
+        margin-bottom: 10px;
+    }
+
+    .merch-card h4 {
+        font-size: .82rem;
+        line-height: 1.25;
+    }
+
+    .merch-card span {
+        display: block;
+
+        font-size: .68rem;
+        line-height: 1.3;
+    }
+
+
+    /* SHOWS */
+
+    .tour-grid {
+        display: block;
+    }
+
+    .show-card {
+        display: grid;
+
+        grid-template-columns: 135px minmax(0, 1fr);
+
+        gap: 22px;
+
+        width: 100%;
+
+        align-items: start;
+    }
+
+    .show-card img {
+        width: 135px;
+        max-width: none;
+
+        margin: 0;
+
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+    }
+
+    .show-info {
+        padding: 0;
+        text-align: left;
+    }
+
+    .show-info h3 {
+        margin-bottom: 14px;
+
+        font-size: 1.8rem;
+        line-height: 1.05;
+    }
+
+    .show-info p {
+        margin-bottom: 7px;
+
+        font-size: .88rem;
+        line-height: 1.35;
+    }
+
+    .show-info a {
+        display: inline-block;
+
+        margin-top: 12px;
+
+        color: var(--red);
+
+        font-size: .75rem;
+        letter-spacing: .08em;
+
+        text-transform: uppercase;
+    }
+
+
+    /* DISCOGRAFIA — LANÇAMENTO PRINCIPAL */
+
+    .featured-release {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 45px 0 75px;
+    }
+
+    .featured-release>img {
+        width: min(100%, 360px);
+        margin: 0 auto;
+        animation: none;
+    }
+
+    .featured-info {
+        text-align: center;
+    }
+
+    .featured-info h3 {
+        font-size: 2.8rem;
+    }
+
+
+    /* DISCOGRAFIA — ANOS */
+
+    .discography-year {
+        display: grid;
+        grid-template-columns: 52px minmax(0, 1fr);
+        gap: 18px;
+        margin: 55px 0;
+    }
+
+    .discography-year h3 {
+        position: static;
+        font-size: .9rem;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        text-align: right;
+    }
+
+    .discography-year h3::after {
+        display: none;
+    }
+
+    .release-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 14px;
+        width: 100%;
+    }
+
+    .release-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .release-card img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .release-card h4 {
+        font-size: .9rem;
+        line-height: 1.25;
+    }
+
+    .release-card:hover {
+        transform: none;
+    }
+
+    .listen {
+        display: none;
+    }
+
+    .type {
+        display: block;
+        height: auto;
+        opacity: .55;
+        overflow: visible;
+    }
+
+
+    /* SOBRE */
+
+    #about {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image {
+        order: 1;
+    }
+
+    .about-text {
+        order: 2;
+        max-width: none;
+    }
+
+    .about-text p {
+        text-align: justify;
+
+        hyphens: auto;
+
+        line-height: 1.7;
+    }
+
+
+    /* REDES E RODAPÉ */
+
+    .social-bar {
+        position: fixed;
+
+        top: auto;
+        right: auto;
+        bottom: 14px;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        display: flex;
+        flex-direction: row;
+
+        gap: 20px;
+
+        padding: 11px 18px;
+
+        background: rgba(9, 9, 9, .94);
+
+        border: 1px solid rgba(255, 255, 255, .12);
+        border-radius: 30px;
+
+        backdrop-filter: blur(12px);
+
+        z-index: 900;
+    }
+
+    .social-bar::before {
+        display: none;
+    }
+
+    .social-bar a {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 0;
+    }
+
+    .social-bar span {
+        display: none;
+    }
+
+    .social-bar i {
+        font-size: 1.15rem;
+    }
+
+    .social-bar a:hover i {
+        transform: none;
+    }
+
+    footer {
+        padding: 55px 22px;
+    }
+
+}
+
+body {
+    padding-bottom: 70px;
+}
