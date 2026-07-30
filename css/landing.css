@@ -1,0 +1,395 @@
+/* ======================================================
+   LANDING PAGE — PROJETO HARE
+   ====================================================== */
+
+:root {
+    --landing-red: #9f321f;
+    --landing-dark-red: #57170f;
+    --landing-cream: #e7dfd4;
+    --landing-black: #17100e;
+
+    /*
+       Largura máxima calculada para que caibam:
+       mensagem + contador + vídeo + barra social
+       sem gerar rolagem.
+    */
+    --media-width: min(
+        88vw,
+        540px,
+        calc((100dvh - 245px) * 0.8)
+    );
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--landing-cream);
+
+    background-color: var(--landing-red);
+    background-image: url("../assets/landing/background.webp");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: min(62vw, 900px) auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ======================================================
+   ESTRUTURA GERAL
+   ====================================================== */
+
+.landing-page {
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.landing {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(8px, 1.5vh, 16px);
+
+    padding:
+        max(10px, env(safe-area-inset-top))
+        max(12px, env(safe-area-inset-right))
+        max(10px, env(safe-area-inset-bottom))
+        max(12px, env(safe-area-inset-left));
+}
+
+/* ======================================================
+   MENSAGEM CRIPTOGRAFADA
+   ====================================================== */
+
+.landing__message {
+    flex: 0 0 auto;
+
+    width: min(94vw, 1000px);
+    margin: 0;
+
+    padding: 7px 14px;
+
+    font-family: "Averia Serif Libre", serif;
+    font-size: clamp(0.72rem, 1.25vw, 1.05rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.07em;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: var(--landing-dark-red);
+    background: rgba(231, 223, 212, 0.86);
+
+    border: 1px solid rgba(87, 23, 15, 0.7);
+
+    box-shadow: 0 4px 14px rgba(41, 9, 5, 0.18);
+
+    text-wrap: balance;
+}
+
+/* ======================================================
+   CONTADOR + VÍDEO
+   ====================================================== */
+
+.landing__media {
+    flex: 0 1 auto;
+
+    width: var(--media-width);
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 8px;
+}
+
+/*
+   O contador vem depois do vídeo no HTML,
+   mas aparece antes visualmente.
+*/
+.countdown {
+    order: -1;
+
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    padding: clamp(9px, 1.2vw, 14px);
+
+    color: var(--landing-cream);
+    background: rgba(87, 23, 15, 0.94);
+
+    border: 2px solid var(--landing-cream);
+
+    box-shadow:
+        0 0 0 3px var(--landing-dark-red),
+        0 8px 18px rgba(41, 9, 5, 0.25);
+}
+
+.countdown__unit {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+}
+
+.countdown__unit:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+    top: 8%;
+    right: 0;
+
+    width: 1px;
+    height: 84%;
+
+    background: rgba(231, 223, 212, 0.55);
+}
+
+.countdown__number {
+    font-family: "Averia Serif Libre", serif;
+    font-size: clamp(1.7rem, 4.5vw, 3.5rem);
+    font-weight: 400;
+    line-height: 0.95;
+
+    font-variant-numeric: tabular-nums;
+}
+
+.countdown__label {
+    margin-top: 0.4em;
+
+    font-size: clamp(0.5rem, 0.9vw, 0.7rem);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+/* ======================================================
+   VÍDEO
+   ====================================================== */
+
+.landing__video {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+    object-position: center;
+
+    background: var(--landing-dark-red);
+
+    border: 2px solid var(--landing-cream);
+
+    box-shadow:
+        0 0 0 3px var(--landing-dark-red),
+        0 12px 26px rgba(41, 9, 5, 0.32);
+}
+
+/* ======================================================
+   REDES SOCIAIS
+   ====================================================== */
+
+.landing__social {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(6px, 1.2vw, 12px);
+
+    padding: 8px 14px;
+
+    color: var(--landing-cream);
+    background: var(--landing-dark-red);
+
+    border-radius: 999px;
+
+    box-shadow: 0 6px 18px rgba(41, 9, 5, 0.28);
+}
+
+.landing__social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 29px;
+    height: 29px;
+
+    font-size: 1.1rem;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.landing__social a:hover,
+.landing__social a:focus-visible {
+    transform: translateY(-2px);
+    opacity: 0.75;
+}
+
+.landing__social span {
+    display: none;
+}
+
+/* ======================================================
+   CELULARES
+   ====================================================== */
+
+@media (max-width: 700px) {
+    :root {
+        --media-width: min(
+            90vw,
+            460px,
+            calc((100dvh - 220px) * 0.8)
+        );
+    }
+
+    body {
+        background-size: 780px auto;
+    }
+
+    .landing {
+        gap: 8px;
+        padding: 8px 10px;
+    }
+
+    .landing__message {
+        width: 94vw;
+        padding: 5px 9px;
+
+        font-size: clamp(0.58rem, 2.5vw, 0.78rem);
+        letter-spacing: 0.045em;
+    }
+
+    .countdown {
+        padding: 8px 5px;
+    }
+
+    .countdown__number {
+        font-size: clamp(1.5rem, 8vw, 2.4rem);
+    }
+
+    .countdown__label {
+        font-size: 0.48rem;
+        letter-spacing: 0.1em;
+    }
+
+    .landing__social {
+        gap: 4px;
+        padding: 6px 10px;
+    }
+
+    .landing__social a {
+        width: 27px;
+        height: 27px;
+        font-size: 1rem;
+    }
+}
+
+/* ======================================================
+   TELAS MUITO BAIXAS
+   ====================================================== */
+
+@media (max-height: 700px) {
+    :root {
+        --media-width: min(
+            82vw,
+            440px,
+            calc((100dvh - 185px) * 0.8)
+        );
+    }
+
+    .landing {
+        gap: 6px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    .landing__message {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        font-size: 0.65rem;
+    }
+
+    .countdown {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    .landing__social {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+.audio-toggle {
+
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    width: 52px;
+    height: 52px;
+
+    border: none;
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    font-size: 1.2rem;
+
+    color: var(--landing-cream);
+
+    background: rgba(87,23,15,.92);
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.25);
+
+    transition:
+        transform .2s,
+        background .2s;
+
+    z-index: 999;
+
+}
+
+.audio-toggle:hover {
+
+    transform: scale(1.08);
+
+    background: rgb(118,35,22);
+
+}

@@ -1,0 +1,50 @@
+name: Publicar site completo
+
+on:
+  schedule:
+    # 06/08 às 21:00 UTC = 18:00 em Brasília
+    - cron: "0 21 6 8 *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Confirmar a data do lançamento
+        if: github.event_name == 'schedule'
+        run: |
+          DATA_ATUAL=$(date -u +%Y-%m-%d)
+
+          if [ "$DATA_ATUAL" != "2026-08-06" ]; then
+            echo "Esta automação só deve publicar o site em 06/08/2026."
+            exit 1
+          fi
+
+      - name: Substituir landing pelo site completo
+        run: |
+          cp site.html index.html
+
+      - name: Salvar alteração no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add index.html
+
+          if git diff --cached --quiet; then
+            echo "O site completo já está publicado."
+            exit 0
+          fi
+
+          git commit -m "Publica site completo automaticamente"
+          git push origin main
