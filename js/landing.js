@@ -1,7 +1,8 @@
-const staticAudio = new Audio("assets/audio/static.mp3");
+const staticAudio = new Audio("/assets/audio/static-noise.mp3?v=2");
 
 staticAudio.loop = true;
 staticAudio.volume = 0.08;
+staticAudio.preload = "auto";
 
 const audioButton = document.getElementById("audio-toggle");
 
