@@ -142,7 +142,7 @@
         max-width: none;
         min-height: 100svh;
 
-        padding: 80px 24px 50px;
+        padding: 70px 24px 110px;
 
         justify-content: flex-start;
 
@@ -157,7 +157,7 @@
     .eyebrow {
         font-size: .8rem;
         letter-spacing: .22em;
-        margin-top:110px;
+        margin-top: 70px;
     }
 
     .hero p {
@@ -177,6 +177,51 @@
         font-size: .72rem;
     }
 
+    /* CONTAGEM REGRESSIVA */
+
+    .release-countdown {
+        width: 100%;
+        max-width: 390px;
+        margin-top: 22px;
+    }
+
+    .countdown-heading {
+        margin-bottom: 10px;
+
+        font-size: .65rem !important;
+        letter-spacing: .18em;
+    }
+
+    .countdown-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .countdown-unit {
+        padding: 13px 7px 11px;
+        text-align: center;
+    }
+
+    .countdown-number {
+        font-size: clamp(1.65rem, 8.5vw, 2.5rem);
+    }
+
+    .countdown-label {
+        margin-top: 6px;
+
+        font-size: .52rem;
+        letter-spacing: .08em;
+    }
+
+    .countdown-finished {
+        max-width: 330px !important;
+
+        font-size: 1.45rem !important;
+        line-height: 1.15 !important;
+    }
+
+    .hero-buttons {
+        margin-top: 22px;
+    }
 
     /* PLAYER / OUÇA AGORA */
 
@@ -284,66 +329,120 @@
     }
 
 
-    /* SHOWS */
+    /* SHOWS / AGENDA */
+
+    #tour {
+        padding-left: 22px;
+        padding-right: 22px;
+        padding-bottom: 130px;
+    }
+
+    #tour .section-title {
+        margin-bottom: 38px;
+    }
 
     .tour-grid {
-        display: block;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 42px;
     }
 
     .show-card {
         display: grid;
-
-        grid-template-columns: 135px minmax(0, 1fr);
-
-        gap: 22px;
+        grid-template-columns: 126px minmax(0, 1fr);
+        gap: 20px;
 
         width: 100%;
+        min-width: 0;
 
         align-items: start;
+
+        padding-bottom: 38px;
+        border-bottom: 1px solid rgba(239, 232, 220, .14);
+    }
+
+    .show-card:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
     }
 
     .show-card img {
-        width: 135px;
-        max-width: none;
+        width: 126px;
+        height: auto;
+        max-width: 100%;
 
         margin: 0;
 
         aspect-ratio: 4 / 5;
         object-fit: cover;
+
+        border-radius: 3px;
     }
 
     .show-info {
+        min-width: 0;
         padding: 0;
+
         text-align: left;
     }
 
-    .show-info h3 {
-        margin-bottom: 14px;
+    .show-tag {
+        margin: 0 0 12px;
 
-        font-size: 1.8rem;
-        line-height: 1.05;
+        font-size: .67rem;
+        line-height: 1.2;
+        letter-spacing: .18em;
+    }
+
+    .show-date {
+        margin: 0 0 10px;
+
+        font-size: .82rem;
+        line-height: 1.2;
+        letter-spacing: .12em;
+    }
+
+    .show-info h3 {
+        margin: 0 0 14px;
+
+        font-size: clamp(1.65rem, 8vw, 2.15rem);
+        line-height: .95;
+
+        overflow-wrap: anywhere;
     }
 
     .show-info p {
-        margin-bottom: 7px;
+        margin: 0 0 8px;
 
-        font-size: .88rem;
-        line-height: 1.35;
+        font-size: .84rem;
+        line-height: 1.4;
+
+        overflow-wrap: anywhere;
     }
 
-    .show-info a {
-        display: inline-block;
+    .show-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
 
-        margin-top: 12px;
+        margin-top: 14px;
+        padding: 11px 14px;
 
-        color: var(--red);
+        border: 1px solid var(--paper);
 
-        font-size: .75rem;
-        letter-spacing: .08em;
+        color: var(--paper);
 
+        font-size: .64rem;
+        line-height: 1.2;
+        letter-spacing: .1em;
+        text-align: center;
         text-transform: uppercase;
     }
 
+    .show-button:hover {
+        background: var(--paper);
+        color: var(--bg);
+    }
 
     /* DISCOGRAFIA — LANÇAMENTO PRINCIPAL */
 
@@ -517,4 +616,25 @@
 
 body {
     padding-bottom: 70px;
+}
+
+@media (max-width: 390px) {
+
+    .show-card {
+        grid-template-columns: 108px minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .show-card img {
+        width: 108px;
+    }
+
+    .show-info h3 {
+        font-size: 1.55rem;
+    }
+
+    .show-info p {
+        font-size: .8rem;
+    }
+
 }

@@ -97,7 +97,7 @@
 
                 <li><a href="#release">Lançamento</a></li>
                 <li><a href="#store">Loja</a></li>
-                <li><a href="#tour">Shows</a></li>
+                <li><a href="#tour">Agenda</a></li>
                 <li><a href="#discography">Discografia</a></li>
                 <li><a href="#about">Sobre</a></li>
 
@@ -130,15 +130,51 @@
                 <img class="album-logo fade-delay-2" src="assets/album-logo.png" alt="São Cristóvão">
 
                 <p class="hero-description fade-delay-3">
-
-                    O terceiro álbum da PROJETO HARE.
-
+                    O terceiro álbum da PROJETO HARE.<br>
+                    <span id="release-date-text">
+                        Disponível em 24 de agosto.
+                    </span>
                 </p>
+
+                <div class="release-countdown fade-delay-4" id="release-countdown"
+                    aria-label="Contagem regressiva para o lançamento de São Cristóvão">
+                    <p class="countdown-heading">Faltam</p>
+
+                    <div class="countdown-grid">
+
+                        <div class="countdown-unit">
+                            <span class="countdown-number" id="countdown-days">00</span>
+                            <span class="countdown-label">Dias</span>
+                        </div>
+
+                        <div class="countdown-unit">
+                            <span class="countdown-number" id="countdown-hours">00</span>
+                            <span class="countdown-label">Horas</span>
+                        </div>
+
+                        <div class="countdown-unit">
+                            <span class="countdown-number" id="countdown-minutes">00</span>
+                            <span class="countdown-label">Min</span>
+                        </div>
+
+                        <div class="countdown-unit">
+                            <span class="countdown-number" id="countdown-seconds">00</span>
+                            <span class="countdown-label">Seg</span>
+                        </div>
+
+                    </div>
+
+                    <p class="countdown-finished" id="countdown-finished" hidden>
+                        Ouça em todas as plataformas!
+                    </p>
+                </div>
 
                 <div class="hero-buttons fade-delay-4">
 
-                    <a href="#" class="button">
-                        Pre-Save
+                    <a href="LINK_DO_PRE_SAVE" class="button" id="release-main-button"
+                        data-presave-url="LINK_DO_PRE_SAVE" data-release-url="LINK_DO_ALBUM" target="_blank"
+                        rel="noopener noreferrer">
+                        Pré-save
                     </a>
 
                     <a href="#tour" class="button secondary">
@@ -212,12 +248,13 @@
                         Faça sua reserva antecipadamente e retire em um dos shows!
                     </p>
 
-                    <a href="#" class="store-button" target="_blank" rel="noopener noreferrer">
-                        Reservar agora
+                    <a href="https://forms.gle/7XVbtFSUE2QZsdnn9" class="store-button" target="_blank"
+                        rel="noopener noreferrer">
+                        Reservar
                     </a>
 
                     <small>
-                        O link de reserva será disponibilizado em breve.
+                        Reserva sujeita à confirmação de estoque e pagamento.
                     </small>
 
                 </div>
@@ -281,31 +318,121 @@
         <section id="tour">
 
             <div class="section-title">
-
-                <h2>
-                    Próximos Shows
-                </h2>
-
+                <h2>Agenda</h2>
             </div>
 
             <div class="tour-grid">
 
+                <!-- LISTENING PARTY -->
+
                 <article class="show-card">
 
-                    <img src="assets/posters/1.webp" alt="Poster">
+                    <img src="assets/posters/listening-party.webp" alt="Listening Party">
 
                     <div class="show-info">
 
-                        <h3>19/9 - Porto Alegre</h3>
+                        <p class="show-tag">Evento gratuito</p>
+
+                        <p class="show-date">21 AGO · 18h</p>
+
+                        <h3>Listening Party</h3>
+
+                        <p>
+                            Russo Bar<br>
+                            Av. Bento Gonçalves, 4183 · Porto Alegre/RS
+                        </p>
+
+                        <p>
+                            Entrada gratuita + merch exclusivo.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <!-- FLORIANÓPOLIS -->
+
+                <article class="show-card">
+
+                    <img src="assets/posters/placeholder.webp" alt="Florianópolis">
+
+                    <div class="show-info">
+
+                        <p class="show-tag">Show</p>
+
+                        <p class="show-date">04 SET</p>
+
+                        <h3>Florianópolis</h3>
+
+                        <p>Informações em breve.</p>
+
+                    </div>
+
+                </article>
+
+                <!-- CURITIBA -->
+
+                <article class="show-card">
+
+                    <img src="assets/posters/placeholder.webp" alt="Curitiba">
+
+                    <div class="show-info">
+
+                        <p class="show-tag">Show</p>
+
+                        <p class="show-date">05 SET</p>
+
+                        <h3>Curitiba</h3>
+
+                        <p>Informações em breve.</p>
+
+                    </div>
+
+                </article>
+
+                <!-- SÃO PAULO -->
+
+                <article class="show-card">
+
+                    <img src="assets/posters/placeholder.webp" alt="São Paulo">
+
+                    <div class="show-info">
+
+                        <p class="show-tag">Show</p>
+
+                        <p class="show-date">06 SET</p>
+
+                        <h3>São Paulo</h3>
+
+                        <p>Informações em breve.</p>
+
+                    </div>
+
+                </article>
+
+                <!-- PORTO ALEGRE -->
+
+                <article class="show-card">
+
+                    <img src="assets/posters/1.webp" alt="Festival ATL Bands">
+
+                    <div class="show-info">
+
+                        <p class="show-tag">Festival</p>
+
+                        <p class="show-date">19 SET</p>
+
+                        <h3>Porto Alegre</h3>
 
                         <p>Festival ATL Bands</p>
 
-                        <p>Fuga Bar</p>
+                        <p>
+                            Fuga Bar<br>
+                            c/ Bella e o Olmo, QEVA?, Fumaça Urbana e Théo Fetter.
+                        </p>
 
-                        <p>c/ Bella e o Olmo, QEVA?, Fumaça Urbana, Théo Fetter</p>
-
-                        <a href="#">
-                            COMPRAR INGRESSOS
+                        <a href="#" class="show-button">
+                            Comprar ingressos
                         </a>
 
                     </div>
@@ -324,7 +451,8 @@
 
             <div class="featured-release">
 
-                <img src="assets/discography/saocristovao.webp" alt="São Cristóvão" loading="lazy" decoding="async">
+                <img src="assets/discography/saocristovao.webp" alt="Capa do álbum São Cristóvão" loading="lazy"
+                    decoding="async">
 
                 <div class="featured-info">
 
@@ -332,9 +460,13 @@
 
                     <h3>São Cristóvão</h3>
 
-                    <p>Álbum</p>
+                    <p id="featured-release-status">
+                        Álbum · Disponível em 24 de agosto
+                    </p>
 
-                    <a href="#" class="button-outline">
+                    <a href="LINK_DO_PRE_SAVE" class="button-outline" id="featured-release-button"
+                        data-presave-url="LINK_DO_PRE_SAVE" data-release-url="LINK_DO_ALBUM" target="_blank"
+                        rel="noopener noreferrer">
                         Pré-save
                     </a>
 
@@ -649,6 +781,11 @@
 
         </p>
 
+        <small>
+            <br>Desenvolvido por Dr. Memes!
+        </small>
+    
+
     </footer>
 
     <div class="social-bar">
@@ -683,7 +820,7 @@
 
         </a>
 
-        <a href="https://x.com/projetohare" target="_blank" aria-label="X">
+        <a href="https://x.com/projetohare" target="_blank" rel="noopener noreferrer" aria-label="X">
 
             <i class="fa-brands fa-x-twitter"></i>
             <span>X</span>

@@ -245,7 +245,7 @@ HERO
 
     gap: 24px;
 
-    margin-top: 40px;
+    margin-top: 35px;
 
 }
 
@@ -279,6 +279,106 @@ HERO
 
     color: var(--gray);
 
+}
+
+/* ==========================
+   CONTAGEM REGRESSIVA — ÁLBUM
+========================== */
+
+.release-countdown {
+    width: min(100%, 560px);
+    margin-top: 28px;
+}
+
+.countdown-heading {
+    margin-bottom: 12px;
+
+    color: var(--red);
+
+    font-family: "Inter", sans-serif;
+    font-size: .72rem !important;
+    font-weight: 700;
+    line-height: 1 !important;
+
+    letter-spacing: .22em;
+    text-transform: uppercase;
+}
+
+.countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(70px, 1fr));
+
+    width: 100%;
+
+    border-top: 1px solid rgba(239, 232, 220, .35);
+    border-bottom: 1px solid rgba(239, 232, 220, .18);
+}
+
+.countdown-unit {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+    padding: 15px 18px 13px;
+}
+
+.countdown-unit:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+    top: 18%;
+    right: 0;
+
+    width: 1px;
+    height: 64%;
+
+    background: rgba(239, 232, 220, .18);
+}
+
+.countdown-number {
+    display: block;
+
+    font-family: "Averia Serif Libre", serif;
+    font-size: clamp(2rem, 3.4vw, 3.5rem);
+    font-weight: 400;
+    line-height: .95;
+
+    font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+    display: block;
+
+    margin-top: 8px;
+
+    color: rgba(239, 232, 220, .58);
+
+    font-family: "Inter", sans-serif;
+    font-size: .62rem;
+    font-weight: 600;
+
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.countdown-finished {
+    max-width: none !important;
+    padding: 18px 0;
+
+    color: var(--paper);
+
+    font-size: clamp(1.3rem, 2.6vw, 2rem) !important;
+    line-height: 1.15 !important;
+
+    text-transform: uppercase;
+}
+
+.release-countdown.is-finished .countdown-heading,
+.release-countdown.is-finished .countdown-grid {
+    display: none;
 }
 
 section {
@@ -323,13 +423,10 @@ section {
 }
 
 .tour-grid {
-
     display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
     gap: 40px;
-
+    minmax(420px,1fr)
 }
 
 .show-card {
@@ -338,7 +435,7 @@ section {
 
     grid-template-columns: 220px 1fr;
 
-    gap: 50px;
+    gap: 24px;
 
     align-items: center;
 
@@ -346,23 +443,74 @@ section {
 
 .show-card img {
 
-    width: 100%;
+    width: 170px;
 
     border-radius: 4px;
 
 }
 
 .show-info h3 {
-
-    font-size: 42px;
-
-    margin-bottom: 15px;
-
+    font-size: 2.2rem;
+    line-height: 1;
 }
 
 .show-info p {
 
     margin-bottom: 8px;
+
+}
+
+.show-tag {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--red);
+
+    font-size: .72rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+
+    opacity: .9;
+}
+
+.show-date{
+    margin:6px 0 14px;
+
+    color:var(--paper);
+
+    font-size:.95rem;
+    font-weight:700;
+
+    letter-spacing:.16em;
+    text-transform:uppercase;
+}
+
+.show-button{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-top:20px;
+
+    padding:13px 22px;
+
+    border:1px solid var(--paper);
+
+    color:var(--paper);
+
+    font-size:.75rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+
+    transition:.25s;
+}
+
+.show-button:hover{
+
+    background:var(--paper);
+    color:var(--bg);
 
 }
 
@@ -857,19 +1005,19 @@ ANIMAÇÕES HERO
 
 }
 
-.discography-year h3::after{
+.discography-year h3::after {
 
-    content:"";
+    content: "";
 
-    display:block;
+    display: block;
 
-    width:40px;
+    width: 40px;
 
-    height:1px;
+    height: 1px;
 
-    margin-top:14px;
+    margin-top: 14px;
 
-    background:rgba(255,255,255,.15);
+    background: rgba(255, 255, 255, .15);
 
 }
 
@@ -883,27 +1031,27 @@ ANIMAÇÕES HERO
 
 }
 
-.release-card{
+.release-card {
 
-    width:170px;
+    width: 170px;
 
-    flex-shrink:0;
+    flex-shrink: 0;
 
-    text-decoration:none;
+    text-decoration: none;
 
-    color:inherit;
+    color: inherit;
 
-    transition:.3s;
+    transition: .3s;
 
 }
 
-.release-card img{
+.release-card img {
 
-    width:170px;
+    width: 170px;
 
-    aspect-ratio:1/1;
+    aspect-ratio: 1/1;
 
-    object-fit:cover;
+    object-fit: cover;
 
     aspect-ratio: 1 / 1;
 
@@ -923,7 +1071,7 @@ ANIMAÇÕES HERO
 
 .release-card:hover {
 
-    transform:translateY(-6px) scale(1.02);
+    transform: translateY(-6px) scale(1.02);
 
 }
 
@@ -974,6 +1122,7 @@ ANIMAÇÕES HERO
     transition: .25s;
 
 }
+
 /* =========================
 .release-card:hover .type {
 
