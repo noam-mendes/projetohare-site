@@ -1,0 +1,462 @@
+/* ======================================================
+   PRESS KIT — VERSÃO EXCLUSIVA PARA PDF
+====================================================== */
+
+:root {
+    --bg: #090909;
+    --surface: #11100f;
+    --paper: #efe8dc;
+    --muted: #aaa198;
+    --red: #a63623;
+    --border: rgba(239, 232, 220, 0.18);
+}
+
+@page {
+    size: A4;
+    margin: 14mm 15mm 16mm;
+}
+
+* {
+    box-sizing: border-box;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    color: var(--paper);
+    background: var(--bg);
+
+    font-family: "Inter", sans-serif;
+    font-size: 10pt;
+    line-height: 1.55;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ======================================================
+   ELEMENTOS QUE NÃO ENTRAM NO PDF
+====================================================== */
+
+.press-back-link,
+.album-warning,
+.press-gallery-card,
+.press-card:has(.press-actions),
+.press-card:has(.press-downloads) {
+    display: none !important;
+}
+
+
+/* ======================================================
+   ESTRUTURA
+====================================================== */
+
+.press-page {
+    display: block;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.press-release {
+    width: 100%;
+}
+
+
+/* ======================================================
+   CAPA / CABEÇALHO
+====================================================== */
+
+.press-logo {
+    grid-area: logo;
+
+    width: 27mm;
+    margin: 0;
+}
+
+.press-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.press-label {
+    grid-area: label;
+
+    margin: 0;
+
+    color: var(--red);
+
+    font-size: 7pt;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.press-album-logo {
+    grid-area: album;
+
+    width: 100%;
+    max-width: 105mm;
+    max-height: 24mm;
+    margin: 0;
+
+    object-fit: contain;
+    object-position: left center;
+}
+
+.press-date {
+    grid-area: date;
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 7.5pt;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+
+/* ======================================================
+   MANCHETE
+====================================================== */
+
+.release-header {
+    margin: 0 0 7mm;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.release-header h2 {
+    max-width: 175mm;
+    margin: 0;
+
+    font-family: "Averia Serif Libre", serif;
+    font-size: 22pt;
+    font-weight: 700;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+}
+
+.release-subtitle {
+    max-width: 170mm;
+    margin: 4mm 0 0;
+
+    color: var(--muted);
+
+    font-family: "Averia Serif Libre", serif;
+    font-size: 11pt;
+    font-style: italic;
+    line-height: 1.42;
+}
+
+
+/* ======================================================
+   TEXTO
+====================================================== */
+
+.release-body>p {
+    margin: 0 0 4mm;
+    font-size: 9.3pt;
+    line-height: 1.5;
+
+    text-align: justify;
+    hyphens: auto;
+
+    orphans: 3;
+    widows: 3;
+}
+
+.release-body>p:first-child::first-letter {
+    float: left;
+
+    margin: 1.5mm 2.5mm 0 0;
+
+    color: var(--red);
+
+    font-family: "Averia Serif Libre", serif;
+    font-size: 39pt;
+    font-weight: 700;
+    line-height: 0.78;
+}
+
+.release-body h3 {
+    margin: 11mm 0 5mm;
+
+    font-family: "Averia Serif Libre", serif;
+    font-size: 20pt;
+    line-height: 1.08;
+
+    break-after: avoid;
+    page-break-after: avoid;
+}
+
+.release-body em {
+    font-family: "Averia Serif Libre", serif;
+}
+
+
+/* ======================================================
+   IMAGENS
+====================================================== */
+
+.release-figure {
+    margin: 6mm 0;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.release-figure img {
+    width: 100%;
+    max-height: 105mm;
+
+    object-fit: contain;
+
+    border: 0.5pt solid var(--border);
+}
+
+.release-figure--cover {
+    width: 82mm;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.release-figure figcaption {
+    margin-top: 2.5mm;
+
+    color: var(--muted);
+
+    font-size: 7.3pt;
+    font-style: italic;
+    line-height: 1.4;
+    text-align: center;
+}
+
+
+/* ======================================================
+   TRACKLIST
+====================================================== */
+
+.release-tracklist {
+    break-before: page;
+    page-break-before: always;
+}
+
+.release-section {
+    margin: 0;
+    padding: 0;
+}
+
+.tracklist {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(7, auto);
+    grid-auto-flow: column;
+
+    gap: 0 12mm;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.tracklist li {
+    display: grid;
+    grid-template-columns: 9mm minmax(0, 1fr);
+    gap: 2.5mm;
+    align-items: baseline;
+
+    padding: 3mm 0;
+
+    border-bottom: 0.5pt solid var(--border);
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.track-number {
+    color: var(--red);
+
+    font-family: "Averia Serif Libre", serif;
+    font-size: 9pt;
+}
+
+.track-title {
+    font-size: 9.5pt;
+    line-height: 1.4;
+}
+
+.track-title small {
+    color: var(--muted);
+    font-size: 7.5pt;
+}
+
+
+/* ======================================================
+   FICHA TÉCNICA
+====================================================== */
+
+.release-credits {
+    break-before: page;
+    page-break-before: always;
+}
+
+.credits-list {
+    margin: 0;
+}
+
+.credits-list>div {
+    display: grid;
+    grid-template-columns: 46mm minmax(0, 1fr);
+    gap: 6mm;
+
+    padding: 3mm 0;
+
+    border-bottom: 0.5pt solid var(--border);
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.credits-list dt {
+    color: var(--muted);
+
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.credits-list dd {
+    margin: 0;
+
+    font-size: 9pt;
+    line-height: 1.4;
+}
+
+
+/* ======================================================
+   INFORMAÇÕES FINAIS
+====================================================== */
+
+.press-sidebar {
+    position: static;
+
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 5mm;
+
+    margin-top: 10mm;
+    padding-top: 7mm;
+
+    border-top: 0.5pt solid var(--border);
+
+    break-before: page;
+    page-break-before: always;
+}
+
+.press-card {
+    padding: 4.5mm;
+
+    background: var(--surface);
+    border: 0.5pt solid var(--border);
+
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.press-card h2 {
+    margin: 0 0 5mm;
+
+    font-family: "Averia Serif Libre", serif;
+    font-size: 15pt;
+    line-height: 1.1;
+}
+
+.press-details {
+    margin: 0;
+}
+
+.press-details>div {
+    padding: 2.5mm 0;
+
+    border-top: 0.5pt solid var(--border);
+}
+
+.press-details>div:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.press-details dt {
+    margin-bottom: 1mm;
+
+    color: var(--muted);
+
+    font-size: 6.8pt;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.press-details dd {
+    margin: 0;
+
+    font-size: 8.5pt;
+}
+
+.press-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2mm 5mm;
+}
+
+.press-links a,
+.press-contact a {
+    color: var(--muted);
+    font-size: 8.5pt;
+}
+
+.press-links i {
+    width: 5mm;
+    margin-right: 1.5mm;
+
+    color: var(--paper);
+}
+
+.press-contact p {
+    margin: 0 0 3mm;
+}
+
+.press-contact {
+    grid-column: 2;
+}
+
+.press-card h2 {
+    margin-bottom: 3.5mm;
+    font-size: 13pt;
+}
+
+.press-details>div {
+    padding: 1.8mm 0;
+}

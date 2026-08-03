@@ -42,6 +42,43 @@ a {
     text-decoration: none;
 }
 
+.press-back-link {
+    position: fixed;
+    top: 22px;
+    left: 24px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 11px;
+
+    color: var(--muted);
+    background: rgba(9, 9, 9, 0.82);
+
+    border: 1px solid var(--border);
+
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.press-back-link:hover,
+.press-back-link:focus-visible {
+    color: var(--paper);
+    border-color: var(--red);
+    transform: translateX(-2px);
+}
+
 /* ======================================================
    ESTRUTURA
 ====================================================== */
@@ -98,10 +135,12 @@ a {
 .press-album-logo {
     display: block;
 
-    width: min(100%, 700px);
-    height: auto;
+    width: min(100%, 720px);
+    max-height: 260px;
 
-    margin: 0 auto;
+    margin: 0 auto 3rem;
+
+    object-fit: contain;
 }
 
 .press-date {
@@ -726,6 +765,160 @@ a {
     }
 }
 
+.press-back-link {
+    position: static;
+
+    width: fit-content;
+    margin: 14px 14px 0;
+
+    font-size: 0.58rem;
+}
+
+/* ======================================================
+   AVISO DE ACESSO AO ÁLBUM
+====================================================== */
+
+.press-button--album {
+    width: 100%;
+
+    font-family: inherit;
+
+    cursor: pointer;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.album-warning[hidden] {
+    display: none;
+}
+
+.album-warning {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: grid;
+    place-items: center;
+
+    padding: 20px;
+}
+
+.album-warning__backdrop {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.86);
+
+    backdrop-filter: blur(5px);
+}
+
+.album-warning__box {
+    position: relative;
+    z-index: 1;
+
+    width: min(100%, 520px);
+    padding: 38px;
+
+    color: var(--paper);
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.65);
+}
+
+.album-warning__label {
+    margin: 0 0 12px;
+
+    color: var(--red);
+
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.album-warning__box h2 {
+    margin: 0 0 24px;
+
+    font-family: "Averia Serif Libre", serif;
+    font-size: clamp(2rem, 7vw, 3rem);
+    line-height: 1;
+}
+
+.album-warning__box p {
+    margin: 0 0 17px;
+
+    color: var(--muted);
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.album-warning__actions {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.album-warning__button {
+    min-height: 48px;
+    padding: 12px 15px;
+
+    color: var(--paper);
+    background: var(--red);
+
+    border: 1px solid var(--red);
+
+    font-family: "Inter", sans-serif;
+    font-size: 0.67rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.album-warning__button--secondary {
+    color: var(--paper);
+    background: transparent;
+
+    border-color: var(--border);
+}
+
+.album-warning__button:hover,
+.album-warning__button:focus-visible {
+    color: var(--bg);
+    background: var(--paper);
+    border-color: var(--paper);
+}
+
+@media (max-width: 520px) {
+    .album-warning {
+        align-items: end;
+
+        padding: 10px;
+    }
+
+    .album-warning__box {
+        width: 100%;
+        padding: 30px 22px 22px;
+    }
+
+    .album-warning__actions {
+        grid-template-columns: 1fr;
+    }
+
+    .album-warning__button--secondary {
+        order: 2;
+    }
+}
+
 /* ======================================================
    IMPRESSÃO / FUTURO PDF
 ====================================================== */
@@ -1074,4 +1267,8 @@ a {
     .gallery-download-link {
         display: none;
     }
+
+    .album-warning {
+    display: none !important;
+}
 }

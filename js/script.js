@@ -15,6 +15,22 @@ window.addEventListener("scroll", () => {
 });
 
 const mobileButton = document.querySelector("#mobile-button");
+
+const mobileMenuLinks = document.querySelectorAll(
+    ".navbar .mobile-menu-card a, .navbar .nav-item a"
+);
+
+mobileMenuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        navbar.classList.remove("menu-open");
+
+        mobileButton.setAttribute("aria-expanded", "false");
+        mobileButton.setAttribute("aria-label", "Abrir menu");
+
+        document.body.style.overflow = "";
+    });
+});
+
 const navLinks = document.querySelectorAll(".navbar ul a");
 
 mobileButton.addEventListener("click", () => {

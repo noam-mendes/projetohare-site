@@ -243,6 +243,9 @@ HERO
 
     margin: 25px 0 35px;
 
+    transform-origin: center;
+    animation: album-logo-breathe 8s ease-in-out 2s infinite;
+
 }
 
 .hero p {
@@ -1445,3 +1448,20 @@ ANIMAÇÕES HERO
     display: none;
 }
 
+@keyframes album-logo-breathe {
+    0%,
+    72%,
+    100% {
+        scale: 1;
+    }
+
+    84% {
+        scale: 1.035;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .album-logo {
+        animation: none;
+    }
+}

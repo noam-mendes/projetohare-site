@@ -10,6 +10,37 @@
 
     <title>São Cristóvão — Press Kit | Projeto Hare</title>
 
+    <link rel="canonical" href="https://projetohare.com.br/press.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Projeto Hare">
+    <meta property="og:title" content="São Cristóvão — Press Kit | Projeto Hare">
+
+    <meta property="og:description"
+        content="Release, fotos, ficha técnica, tracklist e materiais oficiais de São Cristóvão, novo álbum da Projeto Hare.">
+
+    <meta property="og:url" content="https://projetohare.com.br/press.html">
+
+    <meta property="og:image" content="https://projetohare.com.br/assets/press/press-og.jpg">
+
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+
+    <meta property="og:image:alt" content="Press kit de São Cristóvão, da Projeto Hare">
+
+    <meta property="og:locale" content="pt_BR">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="São Cristóvão — Press Kit | Projeto Hare">
+
+    <meta name="twitter:description"
+        content="Release, fotos, ficha técnica, tracklist e materiais oficiais de São Cristóvão.">
+
+    <meta name="twitter:image" content="https://projetohare.com.br/assets/press/press-og.jpg">
+
+    <meta name="twitter:image:alt" content="Press kit de São Cristóvão, da Projeto Hare">
+
     <link rel="icon" type="image/png" href="assets/favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,9 +53,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <link rel="stylesheet" href="css/press.css">
+
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "MusicAlbum",
+    "name": "São Cristóvão",
+    "byArtist": {
+        "@type": "MusicGroup",
+        "name": "Projeto Hare",
+        "url": "https://projetohare.com.br/"
+    },
+    "datePublished": "2026-08-24",
+    "numTracks": 13,
+    "image": "https://projetohare.com.br/assets/press/press-og.jpg",
+    "url": "https://projetohare.com.br/press.html",
+    "description": "Terceiro álbum da Projeto Hare, com 13 faixas e lançamento em 24 de agosto de 2026."
+    }
+    </script>
+
+    <meta name="robots" content="noindex, nofollow, noarchive">
+
 </head>
 
 <body>
+
+    <a href="/" class="press-back-link">
+        <i class="fa-solid fa-arrow-left"></i>
+        Voltar ao site
+    </a>
 
     <main class="press-page">
 
@@ -369,11 +426,11 @@
 
                 <div class="press-actions">
 
-                    <a href="https://youtube.com/playlist?list=PLBtlRGN_xwZo&si=BRtIP1HH8PIw1XfB" class="press-button"
-                        target="_blank" rel="noopener noreferrer">
+                    <button type="button" class="press-button press-button--album" id="open-album-warning"
+                        data-album-url="https://youtube.com/playlist?list=PLBtlRGN_xwZo&si=BRtIP1HH8PIw1XfB">
                         <i class="fa-brands fa-youtube"></i>
                         Ouvir o álbum
-                    </a>
+                    </button>
 
                     <a href="https://linktr.ee/projetohare" class="press-button press-button--secondary" target="_blank"
                         rel="noopener noreferrer">
@@ -506,33 +563,24 @@
 
                 <div class="press-downloads">
 
-                    <a href="assets/press/release-projeto-hare-saocristovao.pdf"
-                        class="press-download press-download--pending" download aria-disabled="true">
-                        <i class="fa-solid fa-file-pdf"></i>
+                    <a href="assets/press/saocristovao.jpg" class="press-download" download>
+                        <i class="fa-solid fa-image"></i>
 
                         <span>
-                            <strong>Release oficial</strong>
-                            <small>PDF</small>
+                            <strong>Capa do álbum</strong>
+                            <small>JPG</small>
                         </span>
+                    </a>
 
-                        <a href="assets/press/saocristovao.jpg" class="press-download" download>
-                            <i class="fa-solid fa-image"></i>
+                    <a href="https://drive.google.com/drive/folders/1bdhuEvM9RBEUMgiENxeNPJ7r6Dqc713P?usp=drive_link"
+                        class="press-download" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-images"></i>
 
-                            <span>
-                                <strong>Capa do álbum</strong>
-                                <small>JPG</small>
-                            </span>
-                        </a>
-
-                        <a href="https://drive.google.com/drive/folders/1bdhuEvM9RBEUMgiENxeNPJ7r6Dqc713P?usp=drive_link"
-                            class="press-download" target="_blank" rel="noopener noreferrer">
-                            <i class="fa-solid fa-images"></i>
-
-                            <span>
-                                <strong>Fotos de divulgação</strong>
-                                <small>por LUCAS EXPEDIDOR</small>
-                            </span>
-                        </a>
+                        <span>
+                            <strong>Fotos de divulgação</strong>
+                            <small>por LUCAS EXPEDIDOR</small>
+                        </span>
+                    </a>
 
                 </div>
 
@@ -590,6 +638,42 @@
         </aside>
 
     </main>
+
+    <div class="album-warning" id="album-warning-modal" hidden>
+        <div class="album-warning__backdrop" data-close-album-warning></div>
+
+        <div class="album-warning__box">
+
+            <p class="album-warning__label">
+                Material confidencial
+            </p>
+
+            <h2>Antes de ouvir</h2>
+
+            <p>
+                Esta playlist contém o álbum completo antes do lançamento oficial.
+            </p>
+
+            <p>
+                Ao continuar, você concorda em não compartilhar este link nem o áudio antes do lançamento.
+            </p>
+
+            <div class="album-warning__actions">
+
+                <button class="album-warning__button album-warning__button--secondary" data-close-album-warning>
+                    Cancelar
+                </button>
+
+                <button class="album-warning__button" id="confirm-album-access">
+                    Continuar
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/press.js"></script>
 
 </body>
 
