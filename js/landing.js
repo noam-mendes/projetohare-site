@@ -29,7 +29,9 @@ function updateCountdown() {
         minutesElement.textContent = "00";
         secondsElement.textContent = "00";
 
-        clearInterval(countdownInterval);
+        if (countdownInterval !== null) {
+            clearInterval(countdownInterval);
+        }
 
         /*
          * Dá tempo para o GitHub Actions concluir o commit
@@ -65,9 +67,13 @@ function updateCountdown() {
     secondsElement.textContent = formatNumber(seconds);
 }
 
+let countdownInterval = null;
+
 updateCountdown();
 
-const countdownInterval = setInterval(updateCountdown, 1000);
+if (Date.now() < countdownTarget) {
+    countdownInterval = setInterval(updateCountdown, 1000);
+}
 
 audioButton.addEventListener("click", async () => {
 

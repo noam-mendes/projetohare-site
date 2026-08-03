@@ -1,0 +1,1077 @@
+/* ======================================================
+   PRESS KIT — PROJETO HARE
+====================================================== */
+
+:root {
+    --bg: #090909;
+    --surface: #11100f;
+    --surface-light: #191715;
+    --paper: #efe8dc;
+    --muted: #aaa198;
+    --red: #a63623;
+    --border: rgba(239, 232, 220, 0.16);
+    --content-width: 1240px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    color: var(--paper);
+    background: var(--bg);
+
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ======================================================
+   ESTRUTURA
+====================================================== */
+
+.press-page {
+    display: grid;
+    grid-template-columns: minmax(0, 760px) minmax(280px, 360px);
+    column-gap: clamp(50px, 7vw, 100px);
+    align-items: start;
+
+    width: min(calc(100% - 48px), var(--content-width));
+    margin: 0 auto;
+    padding: 52px 0 100px;
+}
+
+/* ======================================================
+   CABEÇALHO
+====================================================== */
+
+.press-header {
+    grid-column: 1 / -1;
+
+    margin-bottom: 70px;
+    padding-bottom: 42px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.press-logo {
+    display: block;
+
+    width: 150px;
+    margin: 0 auto 54px;
+}
+
+.press-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.press-label {
+    margin: 0 0 18px;
+
+    color: var(--red);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.22em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.press-album-logo {
+    display: block;
+
+    width: min(100%, 700px);
+    height: auto;
+
+    margin: 0 auto;
+}
+
+.press-date {
+    margin: 26px 0 0;
+
+    color: var(--muted);
+
+    font-size: 0.86rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+/* ======================================================
+   RELEASE
+====================================================== */
+
+.press-release {
+    min-width: 0;
+}
+
+.release-header {
+    margin-bottom: 50px;
+}
+
+.release-header h2 {
+    max-width: 700px;
+    margin: 0;
+
+    font-family: "Averia Serif Libre", serif;
+    font-size: clamp(2rem, 3.2vw, 3.35rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+}
+
+.release-subtitle {
+    max-width: 680px;
+    margin: 28px 0 0;
+
+    color: var(--muted);
+
+    font-family: "Averia Serif Libre", serif;
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+    font-style: italic;
+    line-height: 1.45;
+
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+.release-body>p {
+    margin: 0 0 28px;
+
+    font-size: 1.03rem;
+    line-height: 1.85;
+
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+.release-body>p:first-child::first-letter {
+    float: left;
+
+    margin: 8px 10px 0 0;
+
+    color: var(--red);
+
+    font-family: "Averia Serif Libre", serif;
+    font-size: 4.6rem;
+    font-weight: 700;
+    line-height: 0.72;
+}
+
+.release-body h3 {
+    margin: 64px 0 24px;
+
+    font-family: "Averia Serif Libre", serif;
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    line-height: 1.08;
+}
+
+.release-body em {
+    font-family: "Averia Serif Libre", serif;
+}
+
+/* ======================================================
+   IMAGENS DO RELEASE
+====================================================== */
+
+.release-figure {
+    margin: 52px 0;
+}
+
+.release-figure img {
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.34);
+}
+
+.release-figure--cover {
+    width: min(82%, 560px);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.release-figure figcaption {
+    margin-top: 13px;
+
+    color: var(--muted);
+
+    font-size: 0.76rem;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* ======================================================
+   COLUNA LATERAL
+====================================================== */
+
+.press-sidebar {
+    position: sticky;
+    top: 28px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    min-width: 0;
+}
+
+.press-card {
+    padding: 26px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+}
+
+.press-card h2 {
+    margin: 0 0 22px;
+
+    font-family: "Averia Serif Libre", serif;
+    font-size: 1.35rem;
+    line-height: 1.1;
+}
+
+/* ======================================================
+   BOTÕES PRINCIPAIS
+====================================================== */
+
+.press-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.press-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 48px;
+    padding: 12px 16px;
+
+    color: var(--paper);
+    background: var(--red);
+
+    border: 1px solid var(--red);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.press-button--secondary {
+    color: var(--paper);
+    background: transparent;
+
+    border-color: var(--border);
+}
+
+.press-button:hover,
+.press-button:focus-visible {
+    transform: translateY(-2px);
+
+    color: var(--bg);
+    background: var(--paper);
+    border-color: var(--paper);
+}
+
+/* ======================================================
+   INFORMAÇÕES GERAIS
+====================================================== */
+
+.press-details {
+    margin: 0;
+}
+
+.press-details>div {
+    padding: 13px 0;
+
+    border-top: 1px solid var(--border);
+}
+
+.press-details>div:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.press-details>div:last-child {
+    padding-bottom: 0;
+}
+
+.press-details dt {
+    margin-bottom: 3px;
+
+    color: var(--muted);
+
+    font-size: 0.64rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.press-details dd {
+    margin: 0;
+
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+/* ======================================================
+   MINI GALERIA
+====================================================== */
+
+.press-gallery {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 7px;
+
+    width: 100%;
+}
+
+.press-gallery-item {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+}
+
+.press-gallery-item--horizontal {
+    grid-column: span 6;
+    aspect-ratio: 16 / 9;
+}
+
+.press-gallery-item--vertical {
+    grid-column: span 2;
+    aspect-ratio: 2 / 3;
+}
+
+.press-gallery img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.press-gallery-item:hover img,
+.press-gallery-item:focus-visible img {
+    transform: scale(1.035);
+    opacity: 0.84;
+}
+
+/* ======================================================
+   DOWNLOADS
+====================================================== */
+
+.press-downloads {
+    display: flex;
+    flex-direction: column;
+}
+
+.press-download {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+
+    padding: 15px 0;
+
+    border-top: 1px solid var(--border);
+
+    transition: color 0.2s ease;
+}
+
+.press-download:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.press-download:last-child {
+    padding-bottom: 0;
+}
+
+.press-download>i {
+    color: var(--red);
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+.press-download span {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.press-download strong {
+    font-size: 0.83rem;
+    line-height: 1.35;
+}
+
+.press-download small {
+    margin-top: 2px;
+
+    color: var(--muted);
+
+    font-size: 0.68rem;
+    line-height: 1.4;
+}
+
+.press-download:hover,
+.press-download:focus-visible {
+    color: var(--red);
+}
+
+.press-download--pending {
+    pointer-events: none;
+    opacity: 0.45;
+}
+
+/* ======================================================
+   LINKS E CONTATO
+====================================================== */
+
+.press-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+}
+
+.press-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    min-width: 0;
+    padding: 9px 0;
+
+    color: var(--muted);
+
+    font-size: 0.76rem;
+
+    transition: color 0.2s ease;
+}
+
+.press-links i {
+    width: 18px;
+
+    color: var(--paper);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.press-links a:hover,
+.press-links a:focus-visible {
+    color: var(--red);
+}
+
+.press-contact p {
+    margin: 0 0 10px;
+}
+
+.press-contact>a {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 7px;
+
+    color: var(--muted);
+
+    font-size: 0.8rem;
+    overflow-wrap: anywhere;
+
+    transition: color 0.2s ease;
+}
+
+.press-contact>a:hover,
+.press-contact>a:focus-visible {
+    color: var(--red);
+}
+
+/* ======================================================
+   TABLET E CELULAR
+====================================================== */
+
+@media (max-width: 940px) {
+    .press-page {
+        grid-template-columns: minmax(0, 1fr);
+
+        width: min(calc(100% - 36px), 760px);
+        padding-top: 30px;
+    }
+
+    .press-header {
+        margin-bottom: 52px;
+    }
+
+    .press-logo {
+        width: 125px;
+        margin-bottom: 42px;
+    }
+
+    .press-sidebar {
+        position: static;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        margin-top: 62px;
+    }
+}
+
+@media (max-width: 620px) {
+    .press-page {
+        width: min(calc(100% - 28px), 760px);
+        padding-bottom: 50px;
+    }
+
+    .press-header {
+        margin-bottom: 42px;
+        padding-bottom: 30px;
+    }
+
+    .press-logo {
+        width: 110px;
+        margin-bottom: 34px;
+    }
+
+    .release-header {
+        margin-bottom: 38px;
+    }
+
+    .release-header h2 {
+        font-size: clamp(1.85rem, 8.5vw, 2.6rem);
+    }
+
+    .release-subtitle {
+        margin-top: 20px;
+        font-size: 1.08rem;
+    }
+
+    .release-body>p {
+        margin-bottom: 24px;
+
+        font-size: 0.96rem;
+        line-height: 1.75;
+    }
+
+    .release-body>p:first-child::first-letter {
+        font-size: 3.8rem;
+    }
+
+    .release-body h3 {
+        margin-top: 48px;
+        font-size: 1.75rem;
+    }
+
+    .release-figure {
+        margin: 40px 0;
+    }
+
+    .release-figure--cover {
+        width: 100%;
+    }
+
+    .press-sidebar {
+        grid-template-columns: 1fr;
+        gap: 14px;
+
+        margin-top: 50px;
+    }
+
+    .press-card {
+        padding: 22px;
+    }
+}
+
+/* ======================================================
+   TRACKLIST E FICHA TÉCNICA
+====================================================== */
+
+.release-section {
+    margin-top: 70px;
+    padding-top: 34px;
+
+    border-top: 1px solid var(--border);
+}
+
+.tracklist {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(7, auto);
+    grid-auto-flow: column;
+
+    gap: 0 56px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.tracklist li {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 12px;
+    align-items: baseline;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.track-number {
+    color: var(--red);
+
+    font-family: "Averia Serif Libre", serif;
+    font-size: 0.88rem;
+}
+
+.track-title {
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.track-title small {
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 400;
+}
+
+.credits-list {
+    margin: 0;
+}
+
+.credits-list>div {
+    display: grid;
+    grid-template-columns: minmax(130px, 190px) minmax(0, 1fr);
+    gap: 22px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.credits-list dt {
+    color: var(--muted);
+
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.credits-list dd {
+    margin: 0;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 620px) {
+    .release-section {
+        margin-top: 52px;
+        padding-top: 26px;
+    }
+
+    .tracklist {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-auto-flow: row;
+    }
+
+    .credits-list>div {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+}
+
+/* ======================================================
+   IMPRESSÃO / FUTURO PDF
+====================================================== */
+
+@media print {
+
+    :root {
+        --bg: #ffffff;
+        --surface: #ffffff;
+        --surface-light: #f3f3f3;
+        --paper: #111111;
+        --muted: #555555;
+        --red: #8e2d1e;
+        --border: rgba(0, 0, 0, 0.18);
+    }
+
+    @page {
+        size: A4;
+        margin: 15mm 16mm 17mm;
+    }
+
+    * {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    html,
+    body {
+        width: auto;
+        height: auto;
+        overflow: visible;
+    }
+
+    body {
+        color: #111111;
+        background: #ffffff;
+
+        font-size: 10pt;
+        line-height: 1.5;
+    }
+
+    a {
+        color: #111111;
+        text-decoration: none;
+    }
+
+    .press-page {
+        display: block;
+
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* CABEÇALHO */
+
+    .press-header {
+        margin: 0 0 7mm;
+        padding: 0 0 5mm;
+
+        border-bottom: .5pt solid #b9b9b9;
+
+        text-align: center;
+    }
+
+    .press-logo {
+        width: 24mm;
+    }
+
+    .press-label {
+        margin-bottom: 5mm;
+
+        color: var(--red);
+
+        font-size: 7.5pt;
+        text-align: center;
+    }
+
+    .press-album-logo {
+        width: 90mm;
+        max-height: 35mm;
+        margin: 0 auto;
+
+        object-fit: contain;
+    }
+
+    .press-date {
+        margin-top: 6mm;
+
+        color: #555555;
+
+        font-size: 8pt;
+        text-align: center;
+    }
+
+    /* MANCHETE */
+
+    .release-header {
+        margin-bottom: 5mm;
+    }
+
+    .release-header h2 {
+        max-width: none;
+        margin: 0;
+
+        font-size: 18pt;
+        line-height: 1.05;
+    }
+
+    .release-subtitle {
+        max-width: none;
+        margin-top: 5mm;
+
+        color: #444444;
+
+        font-size: 11.5pt;
+        line-height: 1.4;
+        text-align: left;
+    }
+
+    /* TEXTO */
+
+    .release-body>p {
+        margin: 0 0 4.5mm;
+
+        font-size: 9.7pt;
+        line-height: 1.55;
+        text-align: justify;
+        hyphens: auto;
+
+        orphans: 3;
+        widows: 3;
+    }
+
+    .release-body>p:first-child::first-letter {
+        margin-top: 1.5mm;
+
+        font-size: 38pt;
+    }
+
+    .release-body h3 {
+        margin: 10mm 0 4mm;
+
+        font-size: 17pt;
+        line-height: 1.1;
+
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    /* IMAGENS */
+
+    .release-figure {
+        margin: 8mm 0;
+
+    }
+
+    .release-figure img {
+        width: 100%;
+        max-height: 110mm;
+
+        object-fit: contain;
+
+        border: 0.5pt solid #cccccc;
+        box-shadow: none;
+    }
+
+    .release-figure--cover {
+        width: 105mm;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .release-figure figcaption {
+        margin-top: 2.5mm;
+
+        color: #555555;
+
+        font-size: 7.5pt;
+    }
+
+    /* TRACKLIST */
+
+    .release-section {
+        margin-top: 10mm;
+        padding-top: 6mm;
+
+        border-top: 0.5pt solid #b9b9b9;
+    }
+
+    .tracklist {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(7, auto);
+        grid-auto-flow: column;
+
+        gap: 0 10mm;
+    }
+
+    .tracklist li {
+        padding: 2.4mm 0;
+
+        border-bottom: 0.5pt solid #d7d7d7;
+
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .track-number {
+        font-size: 8pt;
+    }
+
+    .track-title {
+        font-size: 8.8pt;
+    }
+
+    .track-title small {
+        font-size: 7.2pt;
+    }
+
+    /* FICHA TÉCNICA */
+
+    .credits-list>div {
+        grid-template-columns: 42mm minmax(0, 1fr);
+        gap: 5mm;
+
+        padding: 2.5mm 0;
+
+        border-bottom: 0.5pt solid #d7d7d7;
+
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .credits-list dt {
+        font-size: 7.2pt;
+    }
+
+    .credits-list dd {
+        font-size: 8.6pt;
+        line-height: 1.4;
+    }
+
+    /* BARRA LATERAL VIRA APÊNDICE */
+
+    .press-sidebar {
+        position: static;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5mm;
+
+        margin-top: 12mm;
+        padding-top: 7mm;
+
+        border-top: 0.5pt solid #b9b9b9;
+    }
+
+    .press-card {
+        padding: 5mm;
+
+        background: #ffffff;
+        border: 0.5pt solid #c8c8c8;
+
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .press-card h2 {
+        margin-bottom: 4mm;
+
+        font-size: 12pt;
+    }
+
+    .press-actions {
+        display: block;
+    }
+
+    .press-button {
+        display: block;
+
+        min-height: 0;
+        margin-bottom: 2mm;
+        padding: 2.5mm;
+
+        color: #111111;
+        background: #ffffff;
+
+        border: 0.5pt solid #aaaaaa;
+
+        font-size: 7.5pt;
+    }
+
+    .press-details>div {
+        padding: 2mm 0;
+    }
+
+    .press-details dt {
+        font-size: 6.6pt;
+    }
+
+    .press-details dd {
+        font-size: 8pt;
+    }
+
+    .press-download {
+        padding: 2.5mm 0;
+    }
+
+    .press-download>i {
+        color: var(--red);
+    }
+
+    .press-download strong {
+        font-size: 8pt;
+    }
+
+    .press-download small {
+        font-size: 6.8pt;
+    }
+
+    .press-links {
+        display: block;
+    }
+
+    .press-links a,
+    .press-contact>a {
+        padding: 1.5mm 0;
+
+        color: #222222;
+
+        font-size: 8pt;
+    }
+
+    /* GALERIA NÃO ENTRA NO PDF */
+
+    .press-gallery-card {
+        display: none;
+    }
+
+    /* ELEMENTOS SEM FUNÇÃO NO PDF */
+
+    .press-download--pending {
+        display: none;
+    }
+
+    .gallery-download-link {
+        display: none;
+    }
+}

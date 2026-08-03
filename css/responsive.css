@@ -61,6 +61,127 @@
         height: auto;
     }
 
+    /* =========================================
+   CHAMADA DO BOTÃO MOBILE
+========================================= */
+
+    #mobile-button {
+        position: relative;
+        overflow: visible;
+    }
+
+    #mobile-button::before {
+        content: "";
+
+        position: absolute;
+        top: -2px;
+        right: -2px;
+
+        width: 9px;
+        height: 9px;
+
+        background: #b43c28;
+        border: 2px solid #090909;
+        border-radius: 50%;
+
+        z-index: 2;
+
+        animation: menu-dot-pulse 2s ease-in-out infinite;
+    }
+
+    #mobile-button::after {
+        content: "duvido tu abrir 👉";
+
+        position: absolute;
+        top: 50%;
+        right: calc(100% + 12px);
+
+        transform: translateY(-50%);
+
+        width: max-content;
+        padding: 7px 10px;
+
+        color: #efe8dc;
+        background: rgba(9, 9, 9, 0.94);
+
+        border: 1px solid rgba(180, 60, 40, 0.72);
+        border-radius: 999px;
+
+        font-family: "Inter", sans-serif;
+        font-size: 0.58rem;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+        pointer-events: none;
+
+        opacity: .65;
+
+        animation: menu-callout 2.2s ease-in-out infinite;
+    }
+
+    #mobile-button img {
+        transform-origin: center;
+
+        animation: nervous-hare 3s ease-in-out infinite;
+    }
+
+    .navbar.menu-open #mobile-button::after,
+    .navbar.menu-open #mobile-button::before {
+        opacity: 0;
+        animation: none;
+    }
+
+    .navbar.menu-open #mobile-button img {
+        animation: none;
+    }
+
+
+    /* =========================================
+   ANIMAÇÕES
+========================================= */
+
+    @keyframes nervous-hare {
+
+        0%,
+        55%,
+        100% {
+            transform: translateY(0) rotate(0deg) scale(1);
+        }
+
+        60% {
+            transform: translateY(-2px) rotate(-5deg) scale(1.05);
+        }
+
+        64% {
+            transform: translateY(1px) rotate(5deg) scale(1.08);
+        }
+
+        68% {
+            transform: translateY(-2px) rotate(-4deg) scale(1.06);
+        }
+
+        72% {
+            transform: translateY(0) rotate(0deg) scale(1);
+        }
+    }
+
+    @keyframes menu-callout {
+
+        0%,
+        100% {
+            opacity: .45;
+            transform: translateY(-50%);
+        }
+
+        50% {
+            opacity: 1;
+            transform: translateY(-50%);
+        }
+
+    }
+
     .navbar ul {
         position: fixed;
 
@@ -74,36 +195,207 @@
 
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: stretch;
 
-        gap: 26px;
-        padding: 100px 24px 60px;
+        gap: 10px;
+
+        margin: 0;
+        padding:
+            92px 22px calc(90px + env(safe-area-inset-bottom));
 
         background: #090909;
 
         overflow-y: auto;
+        overscroll-behavior: contain;
 
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
-
-        transform: none;
 
         transition:
             opacity .3s ease,
             visibility .3s ease;
     }
 
-    .navbar ul a {
+    /* =========================================
+   CARDS PRINCIPAIS DO MENU MOBILE
+========================================= */
+
+    .mobile-menu-card {
         display: block;
 
-        font-size: 1.25rem;
+        width: 100%;
+        margin: 0;
+
+        list-style: none;
+    }
+
+    .mobile-menu-card>a {
+        position: relative;
+
+        display: grid;
+        grid-template-columns: 46px minmax(0, 1fr) 22px;
+        gap: 14px;
+        align-items: center;
+
+        width: 100%;
+        min-height: 92px;
+
+        padding: 17px 18px;
+
+        color: var(--paper);
+        background: rgba(255, 255, 255, .045);
+
+        border: 1px solid rgba(255, 255, 255, .16);
+
+        text-align: left;
+
+        overflow: hidden;
+
+        transition:
+            transform .2s ease,
+            background .2s ease,
+            border-color .2s ease;
+    }
+
+    .mobile-menu-card--store>a {
+        border-color: rgba(180, 60, 40, .72);
+
+        background:
+            linear-gradient(110deg,
+                rgba(180, 60, 40, .24),
+                rgba(180, 60, 40, .06));
+    }
+
+    .mobile-menu-card--tour>a {
+        background:
+            linear-gradient(110deg,
+                rgba(255, 255, 255, .09),
+                rgba(255, 255, 255, .025));
+    }
+
+    .mobile-menu-card>a:active {
+        transform: scale(.985);
+    }
+
+    .mobile-menu-card-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 46px;
+        height: 46px;
+
+        color: var(--paper);
+        background: var(--accent);
+
+        border-radius: 50%;
+
+        font-size: 1.05rem;
+    }
+
+    .mobile-menu-card--tour .mobile-menu-card-icon {
+        color: #090909;
+        background: var(--paper);
+    }
+
+    .mobile-menu-card-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        min-width: 0;
+    }
+
+    .mobile-menu-card-text strong {
+        font-family: "Averia Serif Libre", serif;
+        font-size: 1.5rem;
+        line-height: 1;
+        letter-spacing: .02em;
+        text-transform: none;
+    }
+
+    .mobile-menu-card-text small {
+        margin-top: 7px;
+
+        color: rgba(239, 232, 220, .68);
+
+        font-family: "Inter", sans-serif;
+        font-size: .7rem;
+        line-height: 1.35;
+        letter-spacing: .035em;
+        text-transform: none;
+    }
+
+    .mobile-menu-card-arrow {
+        color: rgba(239, 232, 220, .6);
+
+        font-size: .85rem;
+
+        transition: transform .2s ease;
+    }
+
+    .mobile-menu-card>a:active .mobile-menu-card-arrow {
+        transform: translateX(3px);
+    }
+
+
+    /* =========================================
+   LINKS SECUNDÁRIOS DO MENU MOBILE
+========================================= */
+
+    .nav-item {
+        display: block;
+
+        width: 100%;
+        margin: 0;
+
+        list-style: none;
+    }
+
+    .nav-item--store,
+    .nav-item--tour {
+        display: none;
+    }
+
+    .nav-item--release {
+        margin-top: 14px;
+        padding-top: 14px;
+
+        border-top: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .nav-item--press {
+        display: block;
+    }
+
+    .nav-item>a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        padding: 13px 4px;
+
+        color: rgba(239, 232, 220, .78);
+
+        font-size: .82rem;
         line-height: 1.2;
+        letter-spacing: .14em;
+        text-align: left;
+        text-transform: uppercase;
 
-        letter-spacing: .12em;
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+    }
 
-        text-align: center;
+    .nav-item>a::after {
+        content: "→";
+
+        color: rgba(239, 232, 220, .38);
+
+        font-size: .85rem;
+        letter-spacing: 0;
     }
 
     .navbar.menu-open ul {

@@ -122,6 +122,13 @@ NAVBAR
 
 }
 
+/* Cards especiais existem apenas no menu mobile */
+
+.mobile-menu-card,
+.nav-item--press {
+    display: none;
+}
+
 .navbar a {
 
     letter-spacing: 2px;
@@ -191,11 +198,30 @@ HERO
 
 }
 
+.hero::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: clamp(120px, 24vh, 260px);
+
+    background: linear-gradient(to bottom,
+            rgba(9, 9, 9, 0) 0%,
+            rgba(9, 9, 9, 0.45) 45%,
+            #090909 100%);
+
+    pointer-events: none;
+    z-index: 2;
+}
+
 .hero-content {
 
     position: relative;
 
-    z-index: 5;
+    z-index: 3;
 
     height: 100%;
 
@@ -426,7 +452,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
     gap: 40px;
-    minmax(420px,1fr)
+    minmax(420px, 1fr)
 }
 
 .show-card {
@@ -474,43 +500,43 @@ section {
     opacity: .9;
 }
 
-.show-date{
-    margin:6px 0 14px;
+.show-date {
+    margin: 6px 0 14px;
 
-    color:var(--paper);
+    color: var(--paper);
 
-    font-size:.95rem;
-    font-weight:700;
+    font-size: .95rem;
+    font-weight: 700;
 
-    letter-spacing:.16em;
-    text-transform:uppercase;
+    letter-spacing: .16em;
+    text-transform: uppercase;
 }
 
-.show-button{
+.show-button {
 
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-    margin-top:20px;
+    margin-top: 20px;
 
-    padding:13px 22px;
+    padding: 13px 22px;
 
-    border:1px solid var(--paper);
+    border: 1px solid var(--paper);
 
-    color:var(--paper);
+    color: var(--paper);
 
-    font-size:.75rem;
-    letter-spacing:.14em;
-    text-transform:uppercase;
+    font-size: .75rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
 
-    transition:.25s;
+    transition: .25s;
 }
 
-.show-button:hover{
+.show-button:hover {
 
-    background:var(--paper);
-    color:var(--bg);
+    background: var(--paper);
+    color: var(--bg);
 
 }
 
@@ -1418,3 +1444,4 @@ ANIMAÇÕES HERO
 #mobile-button {
     display: none;
 }
+
