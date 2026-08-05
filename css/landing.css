@@ -13,11 +13,9 @@
        mensagem + contador + vídeo + barra social
        sem gerar rolagem.
     */
-    --media-width: min(
-        88vw,
-        540px,
-        calc((100dvh - 245px) * 0.8)
-    );
+    --media-width: min(88vw,
+            540px,
+            calc((100dvh - 245px) * 0.8));
 }
 
 * {
@@ -70,10 +68,7 @@ a {
     gap: clamp(8px, 1.5vh, 16px);
 
     padding:
-        max(10px, env(safe-area-inset-top))
-        max(12px, env(safe-area-inset-right))
-        max(10px, env(safe-area-inset-bottom))
-        max(12px, env(safe-area-inset-left));
+        max(10px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
 }
 
 /* ======================================================
@@ -269,11 +264,9 @@ a {
 
 @media (max-width: 700px) {
     :root {
-        --media-width: min(
-            90vw,
-            460px,
-            calc((100dvh - 220px) * 0.8)
-        );
+        --media-width: min(90vw,
+                460px,
+                calc((100dvh - 220px) * 0.8));
     }
 
     body {
@@ -324,11 +317,9 @@ a {
 
 @media (max-height: 700px) {
     :root {
-        --media-width: min(
-            82vw,
-            440px,
-            calc((100dvh - 185px) * 0.8)
-        );
+        --media-width: min(82vw,
+                440px,
+                calc((100dvh - 185px) * 0.8));
     }
 
     .landing {
@@ -373,10 +364,10 @@ a {
 
     color: var(--landing-cream);
 
-    background: rgba(87,23,15,.92);
+    background: rgba(87, 23, 15, .92);
 
     box-shadow:
-        0 8px 18px rgba(0,0,0,.25);
+        0 8px 18px rgba(0, 0, 0, .25);
 
     transition:
         transform .2s,
@@ -390,6 +381,23 @@ a {
 
     transform: scale(1.08);
 
-    background: rgb(118,35,22);
+    background: rgb(118, 35, 22);
 
+}
+
+.secret-link {
+    color: inherit;
+    text-decoration: none;
+    cursor: default;
+    transition: text-shadow 0.8s ease 1.2s;
+}
+
+.secret-link:hover,
+.secret-link:focus-visible {
+    color: inherit;
+    text-decoration: none;
+    text-shadow:
+        1px 0 rgba(255, 0, 0, 0.35),
+        -1px 0 rgba(0, 180, 255, 0.35);
+    cursor: pointer;
 }
