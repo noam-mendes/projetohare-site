@@ -2,117 +2,919 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Projeto Hare | Site Oficial</title>
 
-    <meta name="description" content="Projeto Hare">
+    <meta name="description" content="Projeto Hare, Porto Alegre/RS. Ouça, compre ingressos e adquira merch oficial.">
+
+    <meta name="author" content="Projeto Hare">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://projetohare.com.br/">
 
     <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/favicon.png">
 
-    <title>Projeto Hare</title>
+    <meta property="og:site_name" content="Projeto Hare">
+    <meta property="og:title" content="Projeto Hare | Site Oficial">
+    <meta property="og:description"
+        content="Projeto Hare, Porto Alegre/RS. Ouça, compre ingressos e adquira merch oficial.">
+    <meta property="og:image" content="https://projetohare.com.br/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Projeto Hare">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:url" content="https://projetohare.com.br/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projeto Hare | Site Oficial">
+    <meta name="twitter:description"
+        content="Rock independente de Porto Alegre. Ouça os lançamentos, acompanhe os shows e conheça a Projeto Hare.">
+    <meta name="twitter:image" content="https://projetohare.com.br/assets/og-image.jpg">
+    <meta name="twitter:image:alt" content="Projeto Hare">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Projeto Hare",
+    "url": "https://projetohare.com.br/",
+    "image": "https://projetohare.com.br/assets/og-image.jpg",
+    "description": "Banda de rock independente de Porto Alegre, formada em 2017.",
+    "foundingDate": "2017",
+    "foundingLocation": {
+        "@type": "Place",
+        "name": "Porto Alegre, Rio Grande do Sul, Brasil"
+    },
+    "genre": [
+        "Rock alternativo",
+        "Rock independente"
+    ],
+    "sameAs": [
+        "https://www.instagram.com/projetohare",
+        "https://open.spotify.com/artist/5hrlixUL2uLOyIKUpJu97u",
+        "https://www.youtube.com/@Projeto_Hare",
+        "https://www.tiktok.com/@projetohare",
+        "https://x.com/projetohare"
+    ]
+}
+</script>
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link
         href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
 </head>
 
-<body class="landing-page">
+<body>
 
-    <main class="landing">
+    <div id="grain"></div>
 
-        <h1 class="landing__message">
-            cebgrtrv-zr r nwhqnv-zr anf zvaunf vqnf r ivaqnf n fnore <a
-                href="https://www.bbc.com/portuguese/articles/cx27r0km0yro" class="secret-link" target="_blank"
-                rel="noopener noreferrer">
-                ivire
-            </a> pbz nyrtevn, ntben r frzcer
-        </h1>
+    <header>
 
-        <section class="landing__media" aria-label="Contagem regressiva">
+        <nav class="navbar">
 
-            <video class="landing__video" poster="assets/landing/landing-poster.webp" autoplay muted loop playsinline
-                preload="metadata">
-                <source src="assets/landing/landing-loop.mp4" type="video/mp4">
-            </video>
+            <a href="#" class="logo">
 
-            <div class="countdown" aria-live="polite">
+                <img src="assets/logo.png" alt="Projeto Hare">
 
-                <div class="countdown__unit">
-                    <span id="countdown-days" class="countdown__number">00</span>
-                    <span class="countdown__label">dias</span>
+            </a>
+
+            <ul class="nav-links">
+
+                <!-- CTAs destacados apenas no menu mobile -->
+
+                <li class="mobile-menu-card mobile-menu-card--store">
+
+                    <a href="#store">
+
+                        <span class="mobile-menu-card-icon">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </span>
+
+                        <span class="mobile-menu-card-text">
+
+                            <strong>Loja</strong>
+
+                            <small>
+                                PRÉ-VENDA DAS CAMISETAS!
+                            </small>
+
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right mobile-menu-card-arrow"></i>
+
+                    </a>
+
+                </li>
+
+                <li class="mobile-menu-card mobile-menu-card--tour">
+
+                    <a href="#tour">
+
+                        <span class="mobile-menu-card-icon">
+                            <i class="fa-solid fa-ticket"></i>
+                        </span>
+
+                        <span class="mobile-menu-card-text">
+
+                            <strong>Agenda</strong>
+
+                            <small>
+                                INGRESSOS DOS PRÓXIMOS SHOWS!
+                            </small>
+
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right mobile-menu-card-arrow"></i>
+
+                    </a>
+
+                </li>
+
+                <!-- Navegação normal -->
+
+                <li class="nav-item nav-item--release">
+                    <a href="#release">Lançamento</a>
+                </li>
+
+                <li class="nav-item nav-item--store">
+                    <a href="#store">Loja</a>
+                </li>
+
+                <li class="nav-item nav-item--tour">
+                    <a href="#tour">Agenda</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#discography">Discografia</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#about">Sobre</a>
+                </li>
+
+            </ul>
+
+            <button id="mobile-button" type="button" aria-label="Abrir menu" aria-expanded="false">
+
+                <img src="assets/menu-logo.png" alt="">
+
+            </button>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <img class="hero-background" src="assets/hero.webp" alt="Projeto Hare" fetchpriority="high">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="eyebrow fade-delay-1">
+                    NOVO LANÇAMENTO
+                </p>
+
+                <img class="album-logo fade-delay-2" src="assets/album-logo.png" alt="São Cristóvão">
+
+                <p class="hero-description fade-delay-3">
+                    O terceiro álbum da PROJETO HARE.<br>
+                    <span id="release-date-text">
+                        Disponível em 24 de agosto.
+                    </span>
+                </p>
+
+                <div class="release-countdown fade-delay-4" id="release-countdown"
+                    aria-label="Contagem regressiva para o lançamento de São Cristóvão">
+                    <p class="countdown-heading">Faltam</p>
+
+                    <div class="countdown-grid">
+
+                        <div class="countdown-unit">
+                            <span class="countdown-number" id="countdown-days">00</span>
+                            <span class="countdown-label">Dias</span>
+                        </div>
+
+                        <div class="countdown-unit">
+                            <span class="countdown-number" id="countdown-hours">00</span>
+                            <span class="countdown-label">Horas</span>
+                        </div>
+
+                        <div class="countdown-unit">
+                            <span class="countdown-number" id="countdown-minutes">00</span>
+                            <span class="countdown-label">Min</span>
+                        </div>
+
+                        <div class="countdown-unit">
+                            <span class="countdown-number" id="countdown-seconds">00</span>
+                            <span class="countdown-label">Seg</span>
+                        </div>
+
+                    </div>
+
+                    <p class="countdown-finished" id="countdown-finished" hidden>
+                        Ouça em todas as plataformas!
+                    </p>
                 </div>
 
-                <div class="countdown__unit">
-                    <span id="countdown-hours" class="countdown__number">00</span>
-                    <span class="countdown__label">horas</span>
-                </div>
+                <div class="hero-buttons fade-delay-4">
 
-                <div class="countdown__unit">
-                    <span id="countdown-minutes" class="countdown__number">00</span>
-                    <span class="countdown__label">min</span>
-                </div>
+                    <a href="https://distrokid.com/hyperfollow/projetohare/so-cristvo" class="button"
+                        id="release-main-button"
+                        data-presave-url="https://distrokid.com/hyperfollow/projetohare/so-cristvo"
+                        data-release-url="LINK_DO_ALBUM" target="_blank" rel="noopener noreferrer">
+                        Pré-save
+                    </a>
 
-                <div class="countdown__unit">
-                    <span id="countdown-seconds" class="countdown__number">00</span>
-                    <span class="countdown__label">seg</span>
+                    <a href="#tour" class="button secondary">
+                        Ingressos
+                    </a>
+
                 </div>
 
             </div>
 
         </section>
 
-        <nav class="social-bar landing__social" aria-label="Redes sociais da Projeto Hare">
+        <section id="release">
 
-            <a href="https://www.instagram.com/projetohare" target="_blank" rel="noopener noreferrer"
-                aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-                <span>Instagram</span>
-            </a>
+            <div class="section-title">
 
-            <a href="https://open.spotify.com/intl-pt/artist/5hrlixUL2uLOyIKUpJu97u" target="_blank"
-                rel="noopener noreferrer" aria-label="Spotify">
-                <i class="fa-brands fa-spotify"></i>
-                <span>Spotify</span>
-            </a>
+                <h2>
+                    FAÇA O PRÉ-SAVE
+                </h2>
 
-            <a href="https://www.youtube.com/@Projeto_Hare" target="_blank" rel="noopener noreferrer"
-                aria-label="YouTube">
-                <i class="fa-brands fa-youtube"></i>
-                <span>YouTube</span>
-            </a>
+            </div>
 
-            <a href="https://www.tiktok.com/@projetohare" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-                <i class="fa-brands fa-tiktok"></i>
-                <span>TikTok</span>
-            </a>
+            <div class="streaming">
 
-            <a href="https://x.com/projetohare" target="_blank" rel="noopener noreferrer" aria-label="X">
-                <i class="fa-brands fa-x-twitter"></i>
-                <span>X</span>
-            </a>
+                <div class="spotify">
 
-            <a href="mailto:projetohare@gmail.com" aria-label="E-mail">
-                <i class="fa-solid fa-envelope"></i>
-                <span>E-mail</span>
-            </a>
+                    <iframe data-testid="embed-iframe" style="border-radius:12px"
+                        src="https://open.spotify.com/embed/artist/5hrlixUL2uLOyIKUpJu97u?utm_source=generator&theme=0&si=4c0c59b18bf34162"
+                        width="100%" height="352" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
 
-        </nav>
 
-        <button id="audio-toggle" class="audio-toggle" type="button" aria-label="Ativar som">
-            <i class="fa-solid fa-volume-xmark"></i>
-        </button>
+                </div>
+
+                <div class="youtube">
+
+                    <iframe width="618" height="415"
+                        src="https://www.youtube.com/embed/videoseries?si=zoXWWytO4f0NVxXh&amp;list=PLTAsUzLtQxkw98cJDdE7fH6yCi_zveVe4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="store">
+
+            <div class="section-title">
+                <h2>Loja</h2>
+            </div>
+
+            <div class="featured-merch">
+
+                <div class="featured-merch-image">
+                    <img src="assets/store/camiseta-saocristovao.webp" alt="Camiseta São Cristóvão" loading="lazy"
+                        decoding="async">
+                </div>
+
+                <div class="featured-merch-info">
+
+                    <span class="store-tag">Pré-venda</span>
+
+                    <h3>Camiseta São Cristóvão</h3>
+
+                    <p>
+                        Camiseta oficial do novo álbum.
+                        Faça sua reserva antecipadamente e retire em um dos shows!
+                    </p>
+
+                    <a href="https://forms.gle/7XVbtFSUE2QZsdnn9" class="store-button" target="_blank"
+                        rel="noopener noreferrer">
+                        Reservar
+                    </a>
+
+                    <small>
+                        Reserva sujeita à confirmação de estoque e pagamento.
+                    </small>
+
+                </div>
+
+            </div>
+
+            <div class="tour-merch">
+
+                <div class="tour-merch-heading">
+
+                    <h3>Merch da Turnê</h3>
+
+                    <p>
+                        Estes itens estarão disponíveis para compra diretamente
+                        nos shows, enquanto durarem os estoques.
+                    </p>
+
+                </div>
+
+                <div class="merch-grid">
+
+                    <article class="merch-card">
+
+                        <img src="assets/store/camiseta-coracao-ecobag.webp"
+                            alt="Camiseta O Coração É um Fardo Pesado e ecobag" loading="lazy" decoding="async">
+
+                        <h4>Camiseta PH2 + Ecobag</h4>
+
+                        <span>Disponível nos shows</span>
+
+                    </article>
+
+                    <article class="merch-card">
+
+                        <img src="assets/store/adesivos.webp" alt="Adesivos da Projeto Hare" loading="lazy"
+                            decoding="async">
+
+                        <h4>Adesivos</h4>
+
+                        <span>Disponíveis nos shows</span>
+
+                    </article>
+
+                    <article class="merch-card">
+
+                        <img src="assets/store/cd.webp" alt="CD físico de São Cristóvão" loading="lazy"
+                            decoding="async">
+
+                        <h4>CD</h4>
+
+                        <span>Em breve</span>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="tour">
+
+            <div class="section-title">
+                <h2>Agenda</h2>
+            </div>
+
+            <div class="tour-grid">
+
+                <!-- LISTENING PARTY -->
+
+                <article class="show-card">
+
+                    <img src="assets/posters/listening-party.webp" alt="Listening Party">
+
+                    <div class="show-info">
+
+                        <p class="show-tag">Evento gratuito</p>
+
+                        <p class="show-date">21 AGO · 18h</p>
+
+                        <h3>Listening Party</h3>
+
+                        <p>
+                            Russo Bar<br>
+                            Av. Bento Gonçalves, 4183 · Porto Alegre/RS
+                        </p>
+
+                        <p>
+                            Entrada gratuita + merch exclusivo.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <!-- FLORIANÓPOLIS -->
+
+                <article class="show-card">
+
+                    <img src="assets/posters/floripa.webp" alt="Florianópolis">
+
+                    <div class="show-info">
+
+                        <p class="show-tag">Show</p>
+
+                        <p class="show-date">04 SET</p>
+
+                        <h3>Florianópolis</h3>
+
+                        <p>Brocave</p>
+
+                        <p>
+                            c/ Desafogo.
+                        </p>
+
+                        <a href="#" class="show-button">
+                            Ingressos em breve
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- CURITIBA -->
+
+                <article class="show-card">
+
+                    <img src="assets/posters/placeholder.webp" alt="Curitiba">
+
+                    <div class="show-info">
+
+                        <p class="show-tag">Show</p>
+
+                        <p class="show-date">05 SET</p>
+
+                        <h3>Curitiba</h3>
+
+                        <p>Informações em breve.</p>
+
+                    </div>
+
+                </article>
+
+                <!-- SÃO PAULO -->
+
+                <article class="show-card">
+
+                    <img src="assets/posters/placeholder.webp" alt="Mistério">
+
+                    <div class="show-info">
+
+                        <p class="show-tag">Show</p>
+
+                        <p class="show-date">6 SET</p>
+
+                        <h3>...</h3>
+
+                        <p>Informações em breve.</p>
+
+                    </div>
+
+                </article>
+
+                <!-- PORTO ALEGRE -->
+
+                <article class="show-card">
+
+                    <img src="assets/posters/1.webp" alt="Festival ATL Bands">
+
+                    <div class="show-info">
+
+                        <p class="show-tag">Festival</p>
+
+                        <p class="show-date">19 SET</p>
+
+                        <h3>Porto Alegre</h3>
+
+                        <p>Festival ATL Bands @ Fuga Bar</p>
+
+                        <p>
+                            c/ Bella e o Olmo da Bruxa, Quem é você Alice?,<br>
+                            Fumaça Urbana e Théo Fetter.
+                        </p>
+
+                        <a href="https://www.sympla.com.br/evento/19-09-atl-bands-o-festival/3510423"
+                            class="show-button">
+                            Comprar ingressos
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="discography" class="section">
+
+            <div class="section-title">
+                <h2>Discografia</h2>
+            </div>
+
+            <div class="featured-release">
+
+                <img src="assets/discography/saocristovao.webp" alt="Capa do álbum São Cristóvão" loading="lazy"
+                    decoding="async">
+
+                <div class="featured-info">
+
+                    <span class="year">2026</span>
+
+                    <h3>São Cristóvão</h3>
+
+                    <p id="featured-release-status">
+                        Álbum · Disponível em 24 de agosto
+                    </p>
+
+                    <a href="https://distrokid.com/hyperfollow/projetohare/so-cristvo" class="button-outline"
+                        id="featured-release-button"
+                        data-presave-url="https://distrokid.com/hyperfollow/projetohare/so-cristvo"
+                        data-release-url="LINK_DO_ALBUM" target="_blank" rel="noopener noreferrer">
+                        Pré-save
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="discography-year">
+
+                <h3>2025</h3>
+
+                <div class="release-grid">
+
+                    <a href="https://open.spotify.com/album/2MgBfNSvvZJxFUybJSEI1E?si=qbUVPkO7QficVdLPp_lZhA"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/nvtn.webp" loading="lazy" decoding="async">
+
+                        <h4>Não Vai Ter Natal</h4>
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                    <a href="https://open.spotify.com/album/3xt6qlPtN3Zp8hCE1eHHh1?si=Tuh_n3x8RxmP5UIssJ7YVQ"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/lobo.webp" loading="lazy" decoding="async">
+
+                        <h4>O Lobo</h4>
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                    <a href="https://open.spotify.com/album/1nbIDd21p5DbMmkczULGDG?si=m-meYFQ1QKGlegS_rsnEsQ"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/fecharam.webp" loading="lazy" decoding="async">
+
+                        <h4>Fecharam Nosso Bar</h4>
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                    <a href="https://open.spotify.com/album/14YCbdLi95D30iTJ6izQYW?si=_9hGUjxcQYacPgAYFkNhWw"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/cao.webp" loading="lazy" decoding="async">
+
+                        <h4>O Cão Mais Fiel do Mundo</h4>
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="discography-year">
+
+                <h3>2024</h3>
+
+                <div class="release-grid">
+
+                    <a href="https://open.spotify.com/album/2On8B1rd9wLdnDCqm15KRr?si=rlTbJBzPTJezo0O5IUudIw"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/coracao.webp" loading="lazy" decoding="async">
+
+                        <h4>O Coração É um Fardo Pesado</h4>
+
+                        <span class="type">Álbum</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                    <a href="https://open.spotify.com/album/72K3vjxQUrrlG71is5lClI?si=blhVE2eQTwK-31cuiejF8w"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/semsentimento.webp" loading="lazy" decoding="async">
+
+                        <h4>Sem Sentimento</h4>
+
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="discography-year">
+
+                <h3>2023</h3>
+
+                <div class="release-grid">
+
+                    <a href="https://open.spotify.com/album/3CIZlLNvqtBdzaPzJMjUA4?si=xzjSByujT8GI22mdZ1JM-Q"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/guarda.webp" loading="lazy" decoding="async">
+
+                        <h4>Guarda Chuva</h4>
+
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="discography-year">
+
+                <h3>2022</h3>
+
+                <div class="release-grid">
+
+                    <a href="https://open.spotify.com/album/6d23gObEQs245rDxRA3L92?si=cmPwn7RRQqSIhORD7eH63g"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/amor.webp" loading="lazy" decoding="async">
+
+                        <h4>Amor Líquido</h4>
+
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="discography-year">
+
+                <h3>2021</h3>
+
+                <div class="release-grid">
+
+                    <a href="https://open.spotify.com/album/7hx4doGgeGdMNnRbwJjYP5?si=vczyX85XSaelcIcwsxl8lQ"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/fuiparar.webp" loading="lazy" decoding="async">
+
+                        <h4>Onde Eu Fui Parar</h4>
+
+                        <span class="type">EP</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="discography-year">
+
+                <h3>2019</h3>
+
+                <div class="release-grid">
+
+                    <a href="https://open.spotify.com/album/2MKmQlUzuOsVBh2KSmwjJx?si=Dw-QP7iFQlSmBCmmq0EyCA"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/devoestar.webp" loading="lazy" decoding="async">
+
+                        <h4>Onde Eu Devo Estar</h4>
+
+                        <span class="type">Álbum</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="discography-year">
+
+                <h3>2018</h3>
+
+                <div class="release-grid">
+
+                    <a href="https://open.spotify.com/album/2hY6AZnqIqNpXkV7k0hXMc?si=4DxvQ4mgRZiuA7iMDlgBrw"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/nomenumero.webp" loading="lazy" decoding="async">
+
+                        <h4>Nome e Número</h4>
+
+                        <span class="type">EP</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                    <a href="https://open.spotify.com/album/3ttr9d1Hbv4h9cKpK13x53?si=mL0KHDCKRIyXR-uKpTyf0Q"
+                        target="_blank" class="release-card">
+
+                        <img src="assets/discography/to.webp" loading="lazy" decoding="async">
+
+                        <h4>Tô</h4>
+
+                        <span class="type">Single</span>
+
+                        <span class="listen">
+                            ♪ Ouvir no Spotify
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="about">
+
+            <div class="about-image">
+
+                <img src="assets/about.webp" alt="Projeto Hare" loading="lazy" decoding="async">
+
+            </div>
+
+            <div class="about-text">
+
+                <h2>
+
+                    Sobre
+
+                </h2>
+
+                <p>
+
+                    Somos a Projeto Hare, uma banda de rock independente de Porto Alegre. Começamos em 2017, nos
+                    corredores do CMPA, e sobrevivemos (de algum jeito) às intempéries do tempo nos tornando uma das
+                    principais bandas emergentes da nova geração do rock gaúcho.
+
+                </p>
+
+                <p>
+
+                    Santos com cabeça de cachorro, lobisomens, cartas de tarô, bares de esquina e amores vividos como
+                    atos de devoção. É desse imaginário que nasce “São Cristóvão”, nosso terceiro álbum. Ao longo de 13
+                    faixas de um rock intenso, construímos aquilo que define um verdadeiro "tarô de boteco": uma
+                    espiritualidade jovem, urbana e complexa, feita de guitarras, copos sobre a mesa, fantasmas,
+                    promessas e noites mal dormidas. O disco chega às plataformas digitais no dia 24 de agosto, com
+                    versão física limitada à venda ao longo da turnê.
+
+                </p>
+
+            </div>
+
+        </section>
+
 
     </main>
 
-    <script src="js/landing.js"></script>
+    <footer>
+
+        <p class="copyright">
+
+            © 2026 Projeto Hare.<br>
+            Todos os direitos reservados.
+
+        </p>
+
+        <p>
+
+            Projeto Hare é<br>
+            Adara Araújo, Arthur Nedel, Otávio da Rosa,<br>
+            Noam Mendes e Leonardo Casagrande.
+
+        </p>
+
+        <small>
+            <br>Desenvolvido por Dr. Memes!
+        </small>
+
+
+    </footer>
+
+    <div class="social-bar">
+
+        <a href="https://www.instagram.com/projetohare" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram">
+
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+
+        </a>
+
+        <a href="https://open.spotify.com/intl-pt/artist/5hrlixUL2uLOyIKUpJu97u?si=r2MWzqa8SqaSxuUdPOiQxw&nd=1&dlsi=9b2154252bfe483a"
+            target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+
+            <i class="fa-brands fa-spotify"></i>
+            <span>Spotify</span>
+
+        </a>
+
+        <a href="https://www.youtube.com/@Projeto_Hare" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+
+            <i class="fa-brands fa-youtube"></i>
+            <span>YouTube</span>
+
+        </a>
+
+        <a href="https://www.tiktok.com/@projetohare" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+
+            <i class="fa-brands fa-tiktok"></i>
+            <span>TikTok</span>
+
+        </a>
+
+        <a href="https://x.com/projetohare" target="_blank" rel="noopener noreferrer" aria-label="X">
+
+            <i class="fa-brands fa-x-twitter"></i>
+            <span>X</span>
+
+        </a>
+
+        <a href="mailto:projetohare@gmail.com" aria-label="Email">
+
+            <i class="fa-solid fa-envelope"></i>
+            <span>E-mail</span>
+
+        </a>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>
